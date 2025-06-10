@@ -59,3 +59,8 @@ body {
 .transition {
   transition: $transition;
 }
+
+.hover:hover {
+  color: $hover;
+  text-shadow: $hover-shadow;
+}
