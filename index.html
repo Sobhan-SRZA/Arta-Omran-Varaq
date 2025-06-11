@@ -3,29 +3,41 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width: 100%">
     <meta name="description"
         content="آرتا عمران ورق - نماینده فولاد مبارکه، تولید کننده سازه‌های فلزی، پل، سوله و انواع پوشش سقفی">
-    <meta name="keywords" content="آرتا عمران ورق, سازه‌های فلزی, فولاد مبارکه, پوشش سقفی, سوله, پل, استراکچر ساختمانی">
+    <meta name="keywords" content="آرتا عمران ورق، سازه‌های فلزی، فولاد مبارکه، پوشش سقفی، سوله، پل، استراکچر ساختمانی">
     <meta name="author" content="آرتا عمران ورق">
+    <meta name="og:title" content="آرتا عمران ورق - سازه‌های فلزی و پوشش سقفی">
+    <meta name="og:description" content="نماینده فولاد مبارکه و پیشرو در تولید سازه‌های فلزی، پل، سوله و پوشش سقفی">
+    <meta name="og:image" content="https://artaomran.com/og-image.jpg"> <!-- جایگذاری با URL تصویر واقعی -->
+    <meta name="og:url" content="https://artaomran.com">
+    <meta name="og:type" content="website">
     <title>آرتا عمران ورق - سازه‌های فلزی و پوشش سقفی</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./assets/favicon.png"> <!-- جایگذاری با favicon واقعی -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Fallback به Google Fonts در صورت عدم دسترسی به فونت‌های محلی -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&family=Inter:wght@400;700&display=swap">
 </head>
 
 <body class="theme-light">
     <!-- Header -->
     <header class="header">
-        <nav class="container header__nav">
+        <nav class="container header__nav" role="navigation" aria-label="ناوبری اصلی">
             <div class="header__logo">
-                <a href="#" class="logo-text">آرتا عمران ورق</a>
+                <a href="#home" class="logo-text" aria-label="آرتا عمران ورق - صفحه اصلی">آرتا عمران ورق</a>
             </div>
-            <ul class="header__menu">
-                <li><a href="#home" class="menu-link">خانه</a></li>
-                <li><a href="#about" class="menu-link">درباره ما</a></li>
-                <li><a href="#projects" class="menu-link">پروژه‌ها</a></li>
-                <li><a href="#contracts" class="menu-link">قراردادها</a></li>
-                <li><a href="#contact" class="menu-link">تماس با ما</a></li>
+            <button class="header__mobile-toggle" aria-label="باز کردن منو" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="header__menu" role="menubar">
+                <li role="none"><a href="#home" class="menu-link" role="menuitem">خانه</a></li>
+                <li role="none"><a href="#about" class="menu-link" role="menuitem">درباره ما</a></li>
+                <li role="none"><a href="#projects" class="menu-link" role="menuitem">پروژه‌ها</a></li>
+                <li role="none"><a href="#contracts" class="menu-link" role="menuitem">قراردادها</a></li>
+                <li role="none"><a href="#contact" class="menu-link" role="menuitem">تماس با ما</a></li>
             </ul>
             <div class="header__controls">
                 <button id="theme-toggle" class="theme-toggle" aria-label="تغییر تم">
@@ -65,10 +77,12 @@
             <div class="projects__grid">
                 <div class="project-card">
                     <div class="project-card__media">
-                        <img src="https://via.placeholder.com/600x400" alt="پروژه سوله صنعتی" loading="lazy">
-                        <video class="project-card__video" poster="https://via.placeholder.com/600x400" controls>
-                            <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"
-                                type="video/mp4">
+                        <img src="https://placehold.co/600x400"
+                            srcset="https://placehold.co/300x200 300w, https://placehold.co/600x400 600w"
+                            sizes="(max-width: 768px) 100vw, 33vw" alt="پروژه سوله صنعتی" loading="lazy">
+                        <video class="project-card__video" poster="https://placehold.co/600x400" controls>
+                            <source src="project-video.webm" type="video/webm">
+                            <source src="project-video.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="project-card__content">
@@ -79,10 +93,12 @@
                 </div>
                 <div class="project-card">
                     <div class="project-card__media">
-                        <img src="https://via.placeholder.com/600x400" alt="پوشش سقفی تجاری" loading="lazy">
-                        <video class="project-card__video" poster="https://via.placeholder.com/600x400" controls>
-                            <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"
-                                type="video/mp4">
+                        <img src="https://placehold.co/600x400"
+                            srcset="https://placehold.co/300x200 300w, https://placehold.co/600x400 600w"
+                            sizes="(max-width: 768px) 100vw, 33vw" alt="پوشش سقفی تجاری" loading="lazy">
+                        <video class="project-card__video" poster="https://placehold.co/600x400" controls>
+                            <source src="project-video.webm" type="video/webm">
+                            <source src="project-video.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="project-card__content">
@@ -92,10 +108,12 @@
                 </div>
                 <div class="project-card">
                     <div class="project-card__media">
-                        <img src="https://via.placeholder.com/600x400" alt="پل فلزی" loading="lazy">
-                        <video class="project-card__video" poster="https://via.placeholder.com/600x400" controls>
-                            <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"
-                                type="video/mp4">
+                        <img src="https://placehold.co/600x400"
+                            srcset="https://placehold.co/300x200 300w, https://placehold.co/600x400 600w"
+                            sizes="(max-width: 768px) 100vw, 33vw" alt="پل فلزی" loading="lazy">
+                        <video class="project-card__video" poster="https://placehold.co/600x400" controls>
+                            <source src="project-video.webm" type="video/webm">
+                            <source src="project-video.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="project-card__content">
@@ -129,9 +147,25 @@
         <div class="container">
             <h2 class="section-title">تماس با ما</h2>
             <p class="contact__text">برای اطلاعات بیشتر و همکاری با ما تماس بگیرید:</p>
-            <p class="contact__info">تلفن: ۱۲۳۴-۵۶۷-۸۹۰ (۰۲۱)</p>
-            <p class="contact__info">ایمیل: info@artaomran.com</p>
-            <p class="contact__info">آدرس: تهران، خیابان نمونه، پلاک ۱۲۳</p>
+            <div class="contact__info phone">
+                <span>(045) 33640100</span>
+                <span>(045) 33640101</span>
+                <span>(045) 33640102</span>
+                <span>09141521205</span>
+                <span>09141517995</span>
+                <span>09120561354</span>
+                <span>09143582659</span>
+            </div>
+            <div class="contact__info">ایمیل: arta_omran_co@yahoo.com</div>
+            <div class="contact__info">آدرس: اردبیل، میدان ایثار، شهرك صنعتی شماره یک، بلوار صنایع، بلوار سرو، تقاطع
+                دوم، خیابان سیزدهم</div>
+            <div class="contact__map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3156.428684656563!2d48.34497731531618!3d38.22177397968486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x31b78c767ab0a842!2z2K7YsdmF2KzZhyDYp9ix2YfYsdmH!5e0!3m2!1sen!2sus!4v1697051234567"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    aria-label="نقشه گوگل برای آرتا عمران ورق" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </div>
     </section>
 
@@ -140,49 +174,103 @@
         <div class="container">
             <p>© 2025 آرتا عمران ورق. تمامی حقوق محفوظ است.</p>
             <div class="footer__socials">
-                <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://t.me/arta_omran_varag" class="social-link"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.instagram.com/arta_omran.co/" class="social-link"><i
+                        class="fab fa-instagram"></i></a>
                 <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </footer>
 
     <script>
-        // Theme Toggle
-        const themeToggle = document.getElementById('theme-toggle');
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('theme-light');
-            document.body.classList.toggle('theme-dark');
-            const icon = themeToggle.querySelector('i');
-            icon.classList.toggle('fa-moon');
-            icon.classList.toggle('fa-sun');
-        });
-
-        // Language Toggle
-        const languageToggle = document.getElementById('language-toggle');
-        languageToggle.addEventListener('change', (e) => {
-            if (e.target.value === 'en') {
-                document.documentElement.lang = 'en';
-                document.documentElement.dir = 'ltr';
-                // Placeholder for English text updates
-            } else {
-                document.documentElement.lang = 'fa';
-                document.documentElement.dir = 'rtl';
-                // Revert to Persian
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme Toggle
+            const themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    document.body.classList.toggle('theme-light');
+                    document.body.classList.toggle('theme-dark');
+                    const icon = themeToggle.querySelector('i');
+                    icon.classList.toggle('fa-moon');
+                    icon.classList.toggle('fa-sun');
+                });
             }
-        });
 
-        // Video toggle (show video on hover)
-        document.querySelectorAll('.project-card').forEach(card => {
-            const img = card.querySelector('.project-card__media img');
-            const video = card.querySelector('.project-card__video');
-            card.addEventListener('mouseenter', () => {
-                img.style.opacity = '0';
-                video.style.opacity = '1';
-            });
-            card.addEventListener('mouseleave', () => {
-                img.style.opacity = '1';
-                video.style.opacity = '0';
+            // Language Toggle
+            const languageToggle = document.getElementById('language-toggle');
+            if (languageToggle) {
+                languageToggle.addEventListener('change', (e) => {
+                    const isEnglish = e.target.value === 'en';
+                    document.documentElement.lang = isEnglish ? 'en' : 'fa';
+                    document.documentElement.dir = isEnglish ? 'ltr' : 'rtl';
+                    // Basic translations
+                    document.querySelector('.logo-text').textContent = isEnglish ? 'Arta Omran Varagh' : 'آرتا عمران ورق';
+                    const menuLinks = ['خانه', 'درباره ما', 'پروژه‌ها', 'قراردادها', 'تماس با ما'];
+                    const enLinks = ['Home', 'About Us', 'Projects', 'Contracts', 'Contact Us'];
+                    document.querySelectorAll('.menu-link').forEach((link, i) => {
+                        link.textContent = isEnglish ? enLinks[i] : menuLinks[i];
+                    });
+                    document.querySelector('.hero__title').textContent = isEnglish ? 'Arta Omran Varagh' : 'آرتا عمران ورق';
+                    document.querySelector('.hero__subtitle').textContent = isEnglish
+                        ? 'Representative of Mobarakeh Steel, Leading in Metal Structures'
+                        : 'نماینده فولاد مبارکه و پیشرو در سازه‌های فلزی';
+                });
+            }
+
+            // Mobile Menu Toggle
+            const mobileToggle = document.querySelector('.header__mobile-toggle');
+            const menu = document.querySelector('.header__menu');
+            if (mobileToggle && menu) {
+                mobileToggle.addEventListener('click', () => {
+                    const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+                    mobileToggle.setAttribute('aria-expanded', !isExpanded);
+                    mobileToggle.classList.toggle('active');
+                    menu.classList.toggle('active');
+                    document.body.style.overflow = isExpanded ? 'auto' : 'hidden';
+                });
+
+                document.querySelectorAll('.menu-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileToggle.classList.remove('active');
+                        menu.classList.remove('active');
+                        mobileToggle.setAttribute('aria-expanded', 'false');
+                        document.body.style.overflow = 'auto';
+                    });
+                });
+            } else {
+                console.error('Mobile menu toggle or menu not found');
+            }
+
+            // Disable video hover on mobile
+            if (!window.matchMedia('(max-width: 767px)').matches) {
+                document.querySelectorAll('.project-card').forEach(card => {
+                    const img = card.querySelector('.project-card__media img');
+                    const video = card.querySelector('.project-card__video');
+                    if (img && video) {
+                        card.addEventListener('mouseenter', () => {
+                            img.style.opacity = '0';
+                            video.style.opacity = '1';
+                        });
+                        card.addEventListener('mouseleave', () => {
+                            img.style.opacity = '1';
+                            video.style.opacity = '0';
+                        });
+                    }
+                });
+            }
+
+            // Scroll Animation
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('animate-hidden');
+                observer.observe(section);
             });
         });
     </script>

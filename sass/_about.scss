@@ -1,22 +1,31 @@
+@import "variable";
+
 .about {
-  padding: 6rem 0;
-  background: var(--bg-light);
+  padding: 8rem 0;
+  background: linear-gradient(180deg, $bg-light 0%, $metallic 100%);
 
   .about__text {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    font-size: 1.2rem;
-    color: var(--text-light);
+    font-size: 1.3rem;
+    color: $text-light;
     text-align: center;
-    animation: fadeIn 1s ease-out;
-
-    @media (max-width: 768px) {
-      font-size: 1rem;
-    }
+    padding: 2rem;
+    background: rgba($bg-light, 0.9);
+    border-radius: $border-radius;
+    box-shadow: $shadow;
+    animation: fadeInUp $animation-duration ease-out;
   }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

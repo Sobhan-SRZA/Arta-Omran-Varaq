@@ -1,6 +1,8 @@
+@import "variable";
+
 .hero {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-  min-height: 80vh;
+  background: linear-gradient(135deg, $primary 0%, $accent 50%, $metallic 100%);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   text-align: center;
@@ -14,92 +16,102 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
-    opacity: 0.3;
+    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"%3E%3Ccircle fill="%23F97316" fill-opacity="0.1" cx="100" cy="100" r="100"/%3E%3C/svg%3E') repeat;
+    opacity: 0.2;
+    z-index: 0;
+    animation: spark 10s infinite linear;
   }
 
   .hero__content {
     position: relative;
     z-index: 1;
+    padding: 2rem;
 
     .hero__title {
-      font-size: 4rem;
-      color: var(--text-dark);
+      font-size: 5rem;
+      color: $bg-light;
       margin-bottom: 1.5rem;
-      animation: fadeInDown 1s ease-out;
-
-      @media (max-width: 768px) {
-        font-size: 2.5rem;
-      }
+      text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      animation: slideInLeft $animation-duration ease-out;
     }
 
     .hero__subtitle {
-      font-size: 1.5rem;
-      color: var(--text-dark);
-      margin-bottom: 2rem;
-      animation: fadeInUp 1s ease-out 0.2s;
+      font-size: 1.8rem;
+      color: $bg-light;
+      margin-bottom: 2.5rem;
+      animation: slideInRight $animation-duration ease-out 0.2s;
       animation-fill-mode: backwards;
-
-      @media (max-width: 768px) {
-        font-size: 1.2rem;
-      }
     }
 
     .hero__cta {
       display: inline-block;
-      padding: 1rem 2rem;
-      background: var(--secondary);
-      color: var(--text-dark);
+      padding: 1rem 3rem;
+      background: $secondary;
+      color: $bg-light;
       text-decoration: none;
-      font-weight: 600;
-      border-radius: var(--border-radius);
-      transition: var(--transition);
-      animation: pulse 2s infinite;
+      font-weight: 700;
+      font-size: 1.2rem;
+      border-radius: $border-radius;
+      transition: $transition;
+      box-shadow: $shadow, 0 0 10px $secondary;
+      animation: bounceIn $animation-duration ease-out 0.4s;
 
       &:hover {
-        background: darken(var(--secondary), 10%);
-        transform: translateY(-3px);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        background: darken($secondary, 10%);
+        box-shadow: $shadow, 0 0 15px $accent;
+        transform: translateY(-5px);
       }
     }
   }
 }
 
 /* Animations */
-@keyframes fadeInDown {
+@keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateX(-50px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
-@keyframes fadeInUp {
+@keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateX(50px);
   }
 
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 
-@keyframes pulse {
+@keyframes bounceIn {
   0% {
-    transform: scale(1);
+    opacity: 0;
+    transform: scale(0.8);
   }
 
   50% {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
 
   100% {
+    opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes spark {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-100px, -100px);
   }
 }

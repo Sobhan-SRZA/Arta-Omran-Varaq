@@ -1,84 +1,112 @@
-/* Custom Properties for Theming */
-:root {
-  --primary: #1E3A8A; /* Deep blue */
-  --secondary: #D97706; /* Gold accent */
-  --bg-light: #F5F5F5; /* Light background */
-  --bg-dark: #111827; /* Dark background */
-  --text-light: #111827; /* Dark text */
-  --text-dark: #F3F4F6; /* Light text */
-  --accent: #3B82F6; /* Lighter blue for highlights */
-  --border-radius: 12px;
-  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
+@import "variable";
 
-/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Vazirmatn', -apple-system, sans-serif;
-  line-height: 1.7;
-  background: var(--bg-light);
-  color: var(--text-light);
-  font-size: 16px;
-  transition: var(--transition);
-  scroll-behavior: smooth;
+@font-face {
+  font-family: 'BYekan';
+  src: url('./assets/font/BYekan.ttf') format('woff2');
 }
 
-/* Dark Theme */
+@font-face {
+  font-family: 'Vazir';
+  src: url('./assets/font/Vazir.ttf') format('woff2');
+}
+
+body {
+  font-family: 'Vazir', 'BYekan', 'Inter', sans-serif;
+  line-height: 1.5;
+  background: $bg-light;
+  color: $text-light;
+  font-size: clamp(14px, 2.5vw, 16px);
+  transition: $transition;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  &[lang="en"] {
+    font-family: 'Inter', 'Vazir', 'BYekan', sans-serif;
+    direction: ltr;
+  }
+
+  &[dir="rtl"] {
+    direction: rtl;
+  }
+}
+
 body.theme-dark {
-  background: var(--bg-dark);
-  color: var(--text-dark);
+  background: $bg-dark;
+  color: $text-dark;
 
   .bg-light {
-    background: #1F2A44;
+    background: #374151;
   }
 
   .text-light {
-    color: var(--text-dark);
+    color: $text-dark;
   }
 }
 
-/* Container */
 .container {
-  max-width: 1280px;
+  width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 clamp(0.5rem, 2vw, 1rem);
 }
 
-/* Typography */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 700;
   line-height: 1.2;
 }
 
 .section-title {
-  font-size: 2.5rem;
-  color: var(--primary);
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
+  color: $primary;
   text-align: center;
-  margin-bottom: 3rem;
-  position: relative;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
   &::after {
     content: '';
-    width: 60px;
-    height: 4px;
-    background: var(--secondary);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, $secondary, $accent);
     position: absolute;
-    bottom: -10px;
+    bottom: -6px;
     left: 50%;
     transform: translateX(-50%);
+    border-radius: 2px;
   }
 }
 
-/* Responsive Typography */
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 2rem;
+a,
+button,
+select {
+  &:focus {
+    outline: 2px solid $accent;
+    outline-offset: 2px;
   }
-  body {
-    font-size: 14px;
-  }
+
+  min-height: 48px;
+  min-width: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: manipulation;
+}
+
+.animate-hidden {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: $transition;
+}
+
+.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
