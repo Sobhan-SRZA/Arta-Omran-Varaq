@@ -1,0 +1,28 @@
+.footer {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+  padding: 3rem 0;
+  text-align: center;
+
+  p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .footer__socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    .social-link {
+      color: var(--text-dark);
+      font-size: 1.8rem;
+      transition: var(--transition);
+
+      &:hover {
+        color: var(--secondary);
+        transform: scale(1.2);
+      }
+    }
+  }
+}

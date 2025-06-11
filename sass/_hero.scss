@@ -1,0 +1,105 @@
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+    opacity: 0.3;
+  }
+
+  .hero__content {
+    position: relative;
+    z-index: 1;
+
+    .hero__title {
+      font-size: 4rem;
+      color: var(--text-dark);
+      margin-bottom: 1.5rem;
+      animation: fadeInDown 1s ease-out;
+
+      @media (max-width: 768px) {
+        font-size: 2.5rem;
+      }
+    }
+
+    .hero__subtitle {
+      font-size: 1.5rem;
+      color: var(--text-dark);
+      margin-bottom: 2rem;
+      animation: fadeInUp 1s ease-out 0.2s;
+      animation-fill-mode: backwards;
+
+      @media (max-width: 768px) {
+        font-size: 1.2rem;
+      }
+    }
+
+    .hero__cta {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: var(--secondary);
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: var(--border-radius);
+      transition: var(--transition);
+      animation: pulse 2s infinite;
+
+      &:hover {
+        background: darken(var(--secondary), 10%);
+        transform: translateY(-3px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,84 @@
+/* Custom Properties for Theming */
+:root {
+  --primary: #1E3A8A; /* Deep blue */
+  --secondary: #D97706; /* Gold accent */
+  --bg-light: #F5F5F5; /* Light background */
+  --bg-dark: #111827; /* Dark background */
+  --text-light: #111827; /* Dark text */
+  --text-dark: #F3F4F6; /* Light text */
+  --accent: #3B82F6; /* Lighter blue for highlights */
+  --border-radius: 12px;
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Vazirmatn', -apple-system, sans-serif;
+  line-height: 1.7;
+  background: var(--bg-light);
+  color: var(--text-light);
+  font-size: 16px;
+  transition: var(--transition);
+  scroll-behavior: smooth;
+}
+
+/* Dark Theme */
+body.theme-dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+
+  .bg-light {
+    background: #1F2A44;
+  }
+
+  .text-light {
+    color: var(--text-dark);
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  &::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: var(--secondary);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  body {
+    font-size: 14px;
+  }
+}

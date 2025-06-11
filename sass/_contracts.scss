@@ -1,0 +1,33 @@
+.contracts {
+  padding: 6rem 0;
+
+  .contracts__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .contract-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: var(--transition);
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      .contract-card__title {
+        font-size: 1.5rem;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .contract-card__desc {
+        font-size: 1rem;
+        color: var(--text-light);
+      }
+    }
+  }
+}

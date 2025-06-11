@@ -1,0 +1,22 @@
+.about {
+  padding: 6rem 0;
+  background: var(--bg-light);
+
+  .about__text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: var(--text-light);
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

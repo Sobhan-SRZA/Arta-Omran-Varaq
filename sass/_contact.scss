@@ -1,0 +1,17 @@
+.contact {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  padding: 6rem 0;
+  color: var(--text-dark);
+  text-align: center;
+
+  .contact__text {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact__info {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+}
