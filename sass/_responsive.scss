@@ -1,6 +1,5 @@
 @media (max-width: 1199px) {
     .container {
-        max-width: 100%;
         padding: 0 2rem;
     }
 }
@@ -10,26 +9,13 @@
         font-size: 2rem;
     }
 
-    .hero {
-        min-height: 70vh;
-
-        &__title {
-            font-size: 2.8rem;
-        }
-
-        &__subtitle {
-            font-size: 1.3rem;
-        }
+    .hero__title {
+        font-size: 2.8rem;
     }
 
     .projects__grid,
     .contracts__list {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.5rem;
-    }
-
-    section {
-        padding: 4rem 0;
     }
 }
 
@@ -38,83 +24,53 @@
         padding: 0 1.5rem;
     }
 
-    .header {
-        &__menu {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 280px;
-            height: 100vh;
-            background: $bg-light;
-            flex-direction: column;
-            justify-content: center;
-            gap: 1.5rem;
-            transition: right 0.4s ease;
-            z-index: 999;
-
-            body.theme-dark & {
-                background: darken($bg-dark, 5%);
-            }
-
-            &.active {
-                right: 0;
-            }
-        }
-
-        &__mobile-toggle {
-            display: block;
-
-            &.active {
-                position: fixed;
-                right: 20px;
-            }
-        }
-
-        &__controls {
-            margin-left: auto;
-            margin-right: 1rem;
-        }
-    }
-
     .hero {
         min-height: 60vh;
-        padding: 2rem 0;
+    }
 
-        &__title {
-            font-size: 2.2rem;
-        }
+    .header__menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: $bg-light;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: right 0.3s ease;
+        z-index: 999;
 
-        &__subtitle {
-            font-size: 1.1rem;
+        &.active {
+            right: 0;
         }
     }
 
-    .section-title {
-        font-size: 1.8rem;
-        margin-bottom: 2rem;
+    .header__mobile-toggle {
+        display: block;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1000;
     }
 
     .contact {
-        &__info {
-            &.phone {
-                .phone-row {
-                    flex-direction: column;
-                    gap: 0.75rem;
-
-                    span {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-
-        &__map {
-            height: 300px;
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     }
 
-    section {
-        padding: 3rem 0;
+    .contact__info.phone {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact__map {
+        height: 300px;
     }
 }
 
@@ -123,42 +79,12 @@
         padding: 0 1rem;
     }
 
-    .hero {
-        min-height: 50vh;
-
-        &__title {
-            font-size: 1.8rem;
-        }
-
-        &__subtitle {
-            font-size: 1rem;
-        }
-
-        &__cta {
-            padding: 0.6rem 1.5rem;
-        }
-    }
-
-    .section-title {
-        font-size: 1.6rem;
+    .hero__title {
+        font-size: 1.8rem;
     }
 
     .projects__grid,
     .contracts__list {
         grid-template-columns: 1fr;
-    }
-
-    .contact {
-        &__map {
-            height: 250px;
-        }
-    }
-
-    .footer {
-        padding: 2rem 0;
-
-        &__socials {
-            gap: 1rem;
-        }
     }
 }

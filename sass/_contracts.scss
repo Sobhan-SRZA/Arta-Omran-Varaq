@@ -16,7 +16,7 @@
       box-shadow: $shadow;
       transition: $transition;
       transform: perspective(1000px) rotateY(0deg);
-
+      
       &:hover {
         transform: perspective(1000px) rotateY(5deg) translateY(-10px);
         box-shadow: $shadow, 0 0 15px $accent;
