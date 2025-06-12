@@ -11,14 +11,14 @@
     gap: 2.5rem;
   }
 
-  .contact__text {
+  &__text {
     font-size: 1.4rem;
     margin-bottom: 2rem;
     text-align: center;
     grid-column: span 2;
   }
 
-  .contact__info {
+  &__info {
     background: rgba($bg-light, 0.95);
     padding: 1.5rem;
     border-radius: $border-radius;
@@ -59,7 +59,7 @@
     }
   }
 
-  .contact__map {
+  &__map {
     grid-column: span 2;
     height: 400px;
     border-radius: $border-radius;
@@ -87,7 +87,7 @@
   }
 
   body.theme-dark & {
-    .contact__info {
+    &__info {
       background: rgba($bg-dark, 0.95);
       color: $text-dark;
 
@@ -96,7 +96,7 @@
       }
     }
 
-    .contact__map iframe {
+    &__map iframe {
       filter: brightness(0.9) invert(0.1);
     }
   }

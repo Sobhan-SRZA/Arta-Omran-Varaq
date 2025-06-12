@@ -4,7 +4,7 @@
   padding: 8rem 0;
   background: linear-gradient(180deg, $bg-light 0%, $metallic 100%);
 
-  .projects__grid {
+  &__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2.5rem;
@@ -21,13 +21,9 @@
       &:hover {
         transform: scale(1.02);
         box-shadow: $shadow, 0 0 15px $secondary;
-
-        .project-card__overlay {
-          opacity: 1;
-        }
       }
 
-      .project-card__media {
+      &__media {
         position: relative;
         width: 100%;
         padding-top: 56.25%;
@@ -43,53 +39,55 @@
           transition: $transition;
         }
 
-        .project-card__video {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          opacity: 0;
-          transition: opacity 0.7s ease;
-        }
+      }
 
-        .project-card__overlay {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba($primary, 0.8);
-          color: $bg-light;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          opacity: 0;
-          transition: $transition;
-          text-align: center;
-          padding: 1rem;
+      &__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 0.7s ease;
+      }
 
-          .overlay__title {
-            font-size: 1.5rem;
-            font-weight: 700;
-          }
+      &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($primary, 0.8);
+        color: $bg-light;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: $transition;
+        text-align: center;
+        padding: 1rem;
+
+        .overlay__title {
+          font-size: 1.5rem;
+          font-weight: 700;
         }
       }
 
-      .project-card__content {
+      &__content {
         padding: 2rem;
 
-        .project-card__title {
-          font-size: 1.8rem;
-          color: $primary;
-          margin-bottom: 0.75rem;
-        }
+      }
 
-        .project-card__desc {
-          font-size: 1rem;
-          color: $text-light;
-        }
+      &__title {
+        font-size: 1.8rem;
+        color: $primary;
+        margin-bottom: 0.75rem;
+      }
+
+      &__desc {
+        font-size: 1rem;
+        color: $text-light;
       }
     }
   }

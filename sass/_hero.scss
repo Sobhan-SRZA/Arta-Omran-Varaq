@@ -22,45 +22,45 @@
     animation: spark 10s infinite linear;
   }
 
-  .hero__content {
+  &__content {
     position: relative;
     z-index: 1;
     padding: 2rem;
+  }
 
-    .hero__title {
-      font-size: 5rem;
-      color: $bg-light;
-      margin-bottom: 1.5rem;
-      text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      animation: slideInLeft $animation-duration ease-out;
-    }
+  &__title {
+    font-size: 5rem;
+    color: $bg-light;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: slideInLeft $animation-duration ease-out;
+  }
 
-    .hero__subtitle {
-      font-size: 1.8rem;
-      color: $bg-light;
-      margin-bottom: 2.5rem;
-      animation: slideInRight $animation-duration ease-out 0.2s;
-      animation-fill-mode: backwards;
-    }
+  &__subtitle {
+    font-size: 1.8rem;
+    color: $bg-light;
+    margin-bottom: 2.5rem;
+    animation: slideInRight $animation-duration ease-out 0.2s;
+    animation-fill-mode: backwards;
+  }
 
-    .hero__cta {
-      display: inline-block;
-      padding: 1rem 3rem;
-      background: $secondary;
-      color: $bg-light;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.2rem;
-      border-radius: $border-radius;
-      transition: $transition;
-      box-shadow: $shadow, 0 0 10px $secondary;
-      animation: bounceIn $animation-duration ease-out 0.4s;
+  &__cta {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: $secondary;
+    color: $bg-light;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: $border-radius;
+    transition: $transition;
+    box-shadow: $shadow, 0 0 10px $secondary;
+    animation: bounceIn $animation-duration ease-out 0.4s;
 
-      &:hover {
-        background: darken($secondary, 10%);
-        box-shadow: $shadow, 0 0 15px $accent;
-        transform: translateY(-5px);
-      }
+    &:hover {
+      background: darken($secondary, 10%);
+      box-shadow: $shadow, 0 0 15px $accent;
+      transform: translateY(-5px);
     }
   }
 }

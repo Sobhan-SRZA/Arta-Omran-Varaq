@@ -4,7 +4,7 @@
   padding: 8rem 0;
   background: $bg-light;
 
-  .contracts__list {
+  &__list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
@@ -22,13 +22,13 @@
         box-shadow: $shadow, 0 0 15px $accent;
       }
 
-      .contract-card__title {
+      &__title {
         font-size: 1.6rem;
         color: $primary;
         margin-bottom: 0.75rem;
       }
 
-      .contract-card__desc {
+      &__desc {
         font-size: 1rem;
         color: $text-light;
       }

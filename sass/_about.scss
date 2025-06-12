@@ -4,7 +4,7 @@
   padding: 8rem 0;
   background: linear-gradient(180deg, $bg-light 0%, $metallic 100%);
 
-  .about__text {
+  &__text {
     max-width: 900px;
     margin: 0 auto;
     font-size: 1.3rem;
