@@ -1,4 +1,7 @@
 @import "variable";
+@import "mixin";
+
+@include load-fonts;
 
 * {
   margin: 0;
@@ -6,107 +9,50 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'BYekan';
-  src: url('./assets/font/BYekan.ttf') format('woff2');
-}
-
-@font-face {
-  font-family: 'Vazir';
-  src: url('./assets/font/Vazir.ttf') format('woff2');
-}
-
 body {
-  font-family: 'Vazir', 'BYekan', 'Inter', sans-serif;
-  line-height: 1.5;
+  font-family: 'Vazir', 'BYekan', sans-serif;
+  line-height: 1.6;
   background: $bg-light;
   color: $text-light;
-  font-size: clamp(14px, 2.5vw, 16px);
-  transition: $transition;
   scroll-behavior: smooth;
-  overflow-x: hidden;
-
-  &[lang="en"] {
-    font-family: 'Inter', 'Vazir', 'BYekan', sans-serif;
-    direction: ltr;
-  }
-
-  &[dir="rtl"] {
-    direction: rtl;
-  }
 }
 
 body.theme-dark {
   background: $bg-dark;
   color: $text-dark;
 
-  .bg-light {
-    background: #374151;
-  }
-
-  .text-light {
-    color: $text-dark;
+  .header {
+    background: rgba($bg-dark, 0.9);
+    color: $text-light;
   }
 }
 
 .container {
-  width: 100%;
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 clamp(0.5rem, 2vw, 1rem);
-}
-
-h1,
-h2,
-h3 {
-  font-weight: 700;
-  line-height: 1.2;
+  padding: 0 1rem;
 }
 
 .section-title {
-  font-size: clamp(1.25rem, 4vw, 1.5rem);
+  font-size: 2rem;
   color: $primary;
   text-align: center;
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-
-  &::after {
-    content: '';
-    width: 50px;
-    height: 3px;
-    background: linear-gradient(90deg, $secondary, $accent);
-    position: absolute;
-    bottom: -6px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 2px;
-  }
-}
-
-a,
-button,
-select {
-  &:focus {
-    outline: 2px solid $accent;
-    outline-offset: 2px;
-  }
-
-  min-height: 48px;
-  min-width: 48px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  touch-action: manipulation;
+  margin-bottom: 2rem;
+  position: relative;
 }
 
 .animate-hidden {
   opacity: 0;
-  transform: translateY(15px);
+  transform: translateY(20px);
   transition: $transition;
 }
 
 .animate {
   opacity: 1;
   transform: translateY(0);
+}
+
+.per-number {
+  font-family: 'BYekan', 'Vazir', sans-serif;
+  direction: ltr;
 }
