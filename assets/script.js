@@ -36,14 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileToggle.setAttribute('aria-expanded', !isExpanded);
         mobileToggle.classList.toggle('active');
         menuWrapper.classList.toggle('active');
-        if (isExpanded) {
+        if (!isExpanded) {
             toggleIcon.classList.remove('fa-bars')
-            toggleIcon.classList.remove('fa-burger')
             toggleIcon.classList.add('fa-xmarks')
         }
 
         else {
-            toggleIcon.classList.remove('fa-burger')
             toggleIcon.classList.remove('fa-xmarks')
             toggleIcon.classList.add('fa-bars')
         }
