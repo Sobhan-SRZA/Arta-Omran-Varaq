@@ -41,30 +41,39 @@
 
     &-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 0.2rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 0.5rem;
       font-size: 1rem;
       line-height: 2;
+      list-style: none;
+      padding: 0;
 
       li {
+        padding: 0.5rem;
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 0.5rem;
+        min-height: 48px;
 
         i {
           color: $secondary;
           font-size: 1.2rem;
+          flex-shrink: 0;
+        }
+
+        span,
+        &>span,
+        &>* {
+          word-break: break-word;
         }
 
         &:last-child {
-          grid-column-start: 1;
-          grid-column-end: 3;
-          grid-row-end: 6;
-          align-items: normal;
+          grid-column: 1 / -1;
+          align-items: flex-start;
           margin-top: 2rem;
 
           i {
-            padding-top: 0.4rem;
+            padding-top: 0.3rem;
           }
         }
       }
@@ -75,6 +84,7 @@
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
     }
   }
+
 
   &__form {
     background: rgba($bg-light, 0.95);
