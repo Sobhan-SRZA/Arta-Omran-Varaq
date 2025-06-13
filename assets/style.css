@@ -521,11 +521,9 @@ body.theme-light .header__menu-wrapper {
   margin-bottom: 1rem;
 }
 .contact__info-list {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between right;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.2rem;
   font-size: 1rem;
   line-height: 2;
 }
@@ -539,6 +537,9 @@ body.theme-light .header__menu-wrapper {
   font-size: 1.2rem;
 }
 .contact__info-list li:last-child {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-end: 6;
   align-items: normal;
   margin-top: 2rem;
 }
@@ -588,7 +589,7 @@ body.theme-light .header__menu-wrapper {
 .contact__form form .contact__form-submit {
   padding: 0.75rem;
   background: #1E40AF;
-  color: #374151;
+  color: #E5E7EB;
   border: none;
   border-radius: 8px;
   font-size: 1rem;
