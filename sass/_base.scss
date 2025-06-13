@@ -15,15 +15,56 @@ body {
   background: $bg-light;
   color: $text-light;
   scroll-behavior: smooth;
+  transition: $transition;
 }
 
 body.theme-dark {
   background: $bg-dark;
-  color: $text-dark;
+  color: $text-light;
+
+  .theme-toggle {
+    color: $text-light;
+  }
+
+  .language-toggle {
+    color: $text-light;
+  }
+
+  .menu-link {
+    color: $text-light;
+  }
 
   .header {
-    background: rgba($bg-dark, 0.9);
-    color: $text-light;
+    background: $bg-dark;
+  }
+
+  .header__menu-wrapper {
+    background: $bg-dark;
+  }
+}
+
+body.theme-light {
+  background: $bg-light;
+  color: $text-dark;
+
+  .theme-toggle {
+    color: $text-dark;
+  }
+
+  .language-toggle {
+    color: $text-dark;
+  }
+
+  .menu-link {
+    color: $text-dark;
+  }
+
+  .header {
+    background: $bg-light;
+  }
+
+  .header__menu-wrapper {
+    background: $bg-light;
   }
 }
 

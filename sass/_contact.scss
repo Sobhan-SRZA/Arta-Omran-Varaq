@@ -3,7 +3,6 @@
 .contact {
   padding: 6rem 0;
   background: linear-gradient(135deg, $bg-light 0%, $metallic 100%);
-  color: $text-light;
 
   .container {
     max-width: 1200px;
@@ -42,17 +41,32 @@
 
     &-list {
       list-style: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between right;
+      // justify-items: end;
+      // gap: 2rem;
       font-size: 1rem;
       line-height: 2;
 
       li {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 1rem;
 
         i {
           color: $secondary;
           font-size: 1.2rem;
+        }
+
+        &:last-child {
+          align-items: normal;
+          margin-top: 2rem;
+
+          i {
+            padding-top: 0.4rem;
+          }
         }
       }
     }
@@ -68,6 +82,7 @@
     padding: 2rem;
     border-radius: $border-radius;
     box-shadow: $shadow;
+    transition: $transition;
 
     &-title {
       font-size: 1.5rem;
@@ -117,6 +132,11 @@
           transform: translateY(-2px);
         }
       }
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
     }
   }
 
