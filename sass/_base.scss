@@ -19,8 +19,17 @@ body {
 }
 
 body.theme-dark {
-  background: $bg-dark;
+  background: $base-bg-dark;
   color: $text-light;
+
+  .theme-area {
+    background: $bg-dark;
+    color: $text-light;
+  }
+
+  .primary {
+    color: $primary-light;
+  }
 
   .theme-toggle {
     color: $text-light;
@@ -40,12 +49,25 @@ body.theme-dark {
 
   .header__menu-wrapper {
     background: $bg-dark;
+  }
+
+  .social-link {
+    color: $text-light;
   }
 }
 
 body.theme-light {
-  background: $bg-light;
+  background: $base-bg-light;
   color: $text-dark;
+
+  .theme-area {
+    background-color: $bg-light;
+    color: $text-dark;
+  }
+
+  .primary {
+    color: $primary;
+  }
 
   .theme-toggle {
     color: $text-dark;
@@ -65,6 +87,10 @@ body.theme-light {
 
   .header__menu-wrapper {
     background: $bg-light;
+  }
+
+  .social-link {
+    color: $text-dark;
   }
 }
 
