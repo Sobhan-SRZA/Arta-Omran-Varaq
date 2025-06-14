@@ -734,7 +734,7 @@ body.theme-light .social-link {
   }
   .header__menu .header__controls {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1.5rem;
     margin-top: 2rem;
   }
