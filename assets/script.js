@@ -38,11 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
         menuWrapper.classList.toggle('active');
         if (!isExpanded) {
             toggleIcon.classList.remove('fa-bars')
-            toggleIcon.classList.add('fa-xmarks')
+            toggleIcon.classList.add('fa-xmark')
         }
 
         else {
-            toggleIcon.classList.remove('fa-xmarks')
+            toggleIcon.classList.remove('fa-xmark')
             toggleIcon.classList.add('fa-bars')
         }
 
