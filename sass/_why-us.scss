@@ -2,7 +2,6 @@
 
 .why-us {
     padding: 6rem 0;
-    background: linear-gradient(180deg, $bg-light, $metallic);
 
     &__grid {
         display: grid;
@@ -15,7 +14,6 @@
             border-radius: $border-radius;
             box-shadow: $shadow;
             text-align: center;
-            transition: $transition;
 
             &:hover {
                 transform: translateY(-5px);
