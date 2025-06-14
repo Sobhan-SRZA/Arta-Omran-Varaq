@@ -1,3 +1,4 @@
+// Fonts
 @mixin load-fonts {
     @font-face {
         font-family: 'BYekan';
@@ -10,8 +11,7 @@
     }
 }
 
-
-/* Animations */
+// Animations
 @keyframes slideInLeft {
     from {
         opacity: 0;
@@ -71,5 +71,111 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+// Dark Theme
+@mixin dark-mode {
+    body.theme-dark {
+        background: $base-bg-dark;
+        color: $text-light;
+
+        .service-card__icon {
+            color: $primary-light;
+        }
+
+        .theme-area {
+            background: $bg-dark;
+            color: $text-light;
+        }
+
+        .primary {
+            color: $primary-light;
+        }
+
+        .theme-toggle {
+            color: $text-light;
+        }
+
+        .language-toggle {
+            color: $text-light;
+        }
+
+        .menu-link {
+            color: $text-light;
+        }
+
+        .header {
+            background: $fh-dark;
+        }
+
+        .header__mobile-toggle {
+            color: $text-light;
+        }
+
+        .header__menu-wrapper {
+            background: $fh-dark;
+        }
+
+        .social-link {
+            color: $text-light;
+        }
+
+        .footer {
+            background: $fh-dark;
+        }
+    }
+}
+
+// Light Theme
+@mixin light-mode {
+    body.theme-light {
+        background: $base-bg-light;
+        color: $text-dark;
+
+        .service-card__icon {
+            color: $primary;
+        }
+
+        .theme-area {
+            background-color: $fh-light;
+            color: $text-dark;
+        }
+
+        .primary {
+            color: $primary;
+        }
+
+        .theme-toggle {
+            color: $text-dark;
+        }
+
+        .language-toggle {
+            color: $text-dark;
+        }
+
+        .menu-link {
+            color: $text-dark;
+        }
+
+        .header {
+            background: $fh-light;
+        }
+
+        .header__mobile-toggle {
+            color: $text-dark;
+        }
+
+        .header__menu-wrapper {
+            background: $fh-light;
+        }
+
+        .social-link {
+            color: $text-dark;
+        }
+
+        .footer {
+            background: $fh-light;
+        }
     }
 }

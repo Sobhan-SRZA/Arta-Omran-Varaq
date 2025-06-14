@@ -9,6 +9,12 @@
   box-sizing: border-box;
 }
 
+html[lang=en] {
+  .header__controls .theme-toggle svg {
+    transform: translate(-50%, -50%);
+  }
+}
+
 body {
   font-family: 'Vazir', sans-serif;
   line-height: 1.6;
@@ -17,97 +23,9 @@ body {
   scroll-behavior: smooth;
 }
 
-body.theme-dark {
-  background: $base-bg-dark;
-  color: $text-light;
-
-  .theme-area {
-    background: $bg-dark;
-    color: $text-light;
-  }
-
-  .primary {
-    color: $primary-light;
-  }
-
-  .theme-toggle {
-    color: $text-light;
-  }
-
-  .language-toggle {
-    color: $text-light;
-  }
-
-  .menu-link {
-    color: $text-light;
-  }
-
-  .header {
-    background: $fh-dark;
-  }
-
-  .header__mobile-toggle {
-    color: $text-light;
-  }
-
-  .header__menu-wrapper {
-    background: $fh-dark;
-  }
-
-  .social-link {
-    color: $text-light;
-  }
-
-  .footer {
-    background: $fh-dark;
-  }
-}
-
-body.theme-light {
-  background: $base-bg-light;
-  color: $text-dark;
-
-  .theme-area {
-    background-color: $fh-light;
-    color: $text-dark;
-  }
-
-  .primary {
-    color: $primary;
-  }
-
-  .theme-toggle {
-    color: $text-dark;
-  }
-
-  .language-toggle {
-    color: $text-dark;
-  }
-
-  .menu-link {
-    color: $text-dark;
-  }
-
-  .header {
-    background: $fh-light;
-  }
-
-  .header__mobile-toggle {
-    color: $text-dark;
-  }
-
-  .header__menu-wrapper {
-    background: $fh-light;
-  }
-
-  .social-link {
-    color: $text-dark;
-  }
-
-  .footer {
-    background: $fh-light;
-  }
-}
+// Themes
+@include dark-mode;
+@include light-mode;
 
 .container {
   max-width: 1200px;

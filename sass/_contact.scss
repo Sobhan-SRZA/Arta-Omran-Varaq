@@ -39,36 +39,34 @@
 
     &-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       font-size: 1rem;
       line-height: 2;
       list-style: none;
       padding: 0;
+      box-sizing: border-box;
 
       li {
         padding: 0.5rem;
         display: flex;
         align-items: center;
         gap: 0.5rem;
+        box-sizing: border-box;
         min-height: 48px;
 
-        i {
+        svg {
+          margin-top: 0.7rem;
+          height: 1.3rem;
+          width: 1.3rem;
           color: $secondary;
-          font-size: 1.2rem;
           flex-shrink: 0;
-        }
-
-        span,
-        &>span,
-        &>* {
-          word-break: break-word;
         }
 
         &:nth-child(8) {
           align-items: flex-start;
 
-          i {
-            padding-top: 0.3rem;
+          svg {
+            margin-top: 0.4rem;
           }
         }
 
@@ -77,8 +75,8 @@
           align-items: flex-start;
           margin-top: 2rem;
 
-          i {
-            padding-top: 0.3rem;
+          svg {
+            margin-top: 0.3rem;
           }
         }
       }
