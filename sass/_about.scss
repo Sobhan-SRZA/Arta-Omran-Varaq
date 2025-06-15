@@ -2,6 +2,7 @@
 
 .about {
   padding: 8rem 0;
+  transition: $transition;
 
   &__text {
     max-width: 900px;
@@ -12,5 +13,6 @@
     background: rgba($bg-light, 0.9);
     border-radius: $border-radius;
     box-shadow: $shadow;
+    transition: $transition;
   }
 }

@@ -44,38 +44,39 @@
     </script>
 </head>
 
-<body class="theme-light transition">
-    <header class="header transition">
-        <nav class="container header__nav transition" role="navigation" aria-label="ناوبری اصلی">
+<body class="theme-light">
+    <header class="header">
+        <nav class="container header__nav" role="navigation" aria-label="ناوبری اصلی">
             <div class="header__logo">
-                <a href="#home" class="logo-text primary transition" aria-label="صفحه اصلی آرتا عمران ورق">آرتا عمران
+                <a href="#home" class="logo-text primary hover" aria-label="صفحه اصلی آرتا عمران ورق">آرتا
+                    عمران
                     ورق</a>
             </div>
-            <button class="header__mobile-toggle transition" aria-label="باز کردن منو" aria-expanded="false">
-                <svg class="header__mobile-icon icon-bar active" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                    fill="currentColor" class="size-6">
+            <button class="header__mobile-toggle hover" aria-label="باز کردن منو" aria-expanded="false">
+                <svg class="header__mobile-icon icon-bar active" stroke="currentColor"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                     <path fill-rule="evenodd"
                         d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
                         clip-rule="evenodd" />
                 </svg>
-                <svg class="header__mobile-icon icon-x" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                    fill="currentColor" class="size-6">
+                <svg class="header__mobile-icon icon-x" stroke="currentColor" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" fill="currentColor" class="size-6">
                     <path fill-rule="evenodd"
                         d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
                         clip-rule="evenodd" />
                 </svg>
             </button>
-            <div class="header__menu-wrapper transition">
-                <ul class="header__menu transition" role="menubar">
-                    <li><a href="#home" class="menu-link transition" role="menuitem">خانه</a></li>
-                    <li><a href="#about" class="menu-link transition" role="menuitem">درباره ما</a></li>
-                    <li><a href="#services" class="menu-link transition" role="menuitem">خدمات</a></li>
-                    <li><a href="#projects" class="menu-link transition" role="menuitem">پروژه‌ها</a></li>
-                    <li><a href="#why-us" class="menu-link transition" role="menuitem">چرا ما</a></li>
-                    <li><a href="#certificates" class="menu-link transition" role="menuitem">گواهینامه‌ها</a></li>
-                    <li><a href="#contact" class="menu-link transition" role="menuitem">تماس با ما</a></li>
-                    <li class="header__controls transition">
-                        <button id="theme-toggle" class="theme-toggle transition" aria-label="تغییر تم">
+            <div class="header__menu-wrapper">
+                <ul class="header__menu" role="menubar">
+                    <li><a href="#home" class="menu-link" role="menuitem">خانه</a></li>
+                    <li><a href="#about" class="menu-link" role="menuitem">درباره ما</a></li>
+                    <li><a href="#services" class="menu-link" role="menuitem">خدمات</a></li>
+                    <li><a href="/projects" class="menu-link" role="menuitem">پروژه‌ها</a></li>
+                    <li><a href="#why-us" class="menu-link" role="menuitem">چرا ما</a></li>
+                    <li><a href="#certificates" class="menu-link" role="menuitem">گواهینامه‌ها</a></li>
+                    <li><a href="#contact" class="menu-link" role="menuitem">تماس با ما</a></li>
+                    <li class="header__controls">
+                        <button id="theme-toggle" class="theme-toggle" aria-label="تغییر تم">
                             <svg class="theme-toggle__icon icon-sun active" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24" fill="currentColor" class="size-6">
                                 <path
@@ -88,7 +89,7 @@
                                     clip-rule="evenodd" />
                             </svg>
                         </button>
-                        <select id="language-toggle" class="language-toggle transition" aria-label="تغییر زبان">
+                        <select id="language-toggle" class="language-toggle" aria-label="تغییر زبان">
                             <option value="fa">فارسی</option>
                             <option value="en">English</option>
                         </select>
@@ -99,18 +100,18 @@
     </header>
 
     <main>
-        <section id="home" class="hero transition">
-            <div class="container hero__content transition">
-                <h1 class="hero__title transition">آرتا عمران ورق</h1>
-                <p class="hero__subtitle transition">نماینده فولاد مبارکه و پیشرو در سازه‌های فلزی</p>
-                <a href="#projects" class="hero__cta transition">مشاهده پروژه‌ها</a>
+        <section id="home" class="hero">
+            <div class="container hero__content">
+                <h1 class="hero__title">آرتا عمران ورق</h1>
+                <p class="hero__subtitle">نماینده فولاد مبارکه و پیشرو در سازه‌های فلزی</p>
+                <a href="/projects" class="hero__cta">مشاهده پروژه‌ها</a>
             </div>
         </section>
 
-        <section id="about" class="about transition">
+        <section id="about" class="about">
             <div class="container">
-                <h2 class="section-title primary transition">درباره ما</h2>
-                <p class="about__text theme-area transition">شرکت آرتا عمران ورق، نماینده رسمی فولاد مبارکه، با بیش از
+                <h2 class="section-title primary">درباره ما</h2>
+                <p class="about__text theme-area">شرکت آرتا عمران ورق، نماینده رسمی فولاد مبارکه، با بیش از
                     ۲۰ سال تجربه
                     در تولید
                     سازه‌های فلزی، پل، سوله و پوشش‌های سقفی فعالیت می‌کند. ما با بهره‌گیری از تکنولوژی‌های پیشرفته و
@@ -118,12 +119,12 @@
             </div>
         </section>
 
-        <section id="services" class="services transition">
-            <div class="container transition">
-                <h2 class="section-title primary transition">خدمات ما</h2>
-                <div class="services__grid transition">
-                    <article class="service-card theme-area transition">
-                        <i class="service-card__icon transition">
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title primary">خدمات ما</h2>
+                <div class="services__grid">
+                    <article class="service-card theme-area">
+                        <i class="service-card__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                 class="size-6">
                                 <path fill-rule="evenodd"
@@ -131,11 +132,11 @@
                                     clip-rule="evenodd" />
                             </svg>
                         </i>
-                        <h3 class="service-card__title primary transition">سازه‌های فلزی</h3>
-                        <p class="service-card__desc transition">طراحی و اجرای سازه‌های فلزی با استانداردهای جهانی.</p>
+                        <h3 class="service-card__title primary">سازه‌های فلزی</h3>
+                        <p class="service-card__desc">طراحی و اجرای سازه‌های فلزی با استانداردهای جهانی.</p>
                     </article>
-                    <article class="service-card theme-area transition">
-                        <i class="service-card__icon transition">
+                    <article class="service-card theme-area">
+                        <i class="service-card__icon">
                             <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -164,11 +165,11 @@
                                 </g>
                             </svg>
                         </i>
-                        <h3 class="service-card__title primary transition">پل‌سازی</h3>
-                        <p class="service-card__desc transition">ساخت پل‌های فلزی مقاوم برای پروژه‌های زیرساختی.</p>
+                        <h3 class="service-card__title primary">پل‌سازی</h3>
+                        <p class="service-card__desc">ساخت پل‌های فلزی مقاوم برای پروژه‌های زیرساختی.</p>
                     </article>
-                    <article class="service-card theme-area transition">
-                        <i class="service-card__icon transition">
+                    <article class="service-card theme-area">
+                        <i class="service-card__icon">
                             <svg fill="currentColor" viewBox="0 -64 640 640" xmlns="http://www.w3.org/2000/svg">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -179,11 +180,11 @@
                                 </g>
                             </svg>
                         </i>
-                        <h3 class="service-card__title primary transition">سوله‌سازی</h3>
-                        <p class="service-card__desc transition">تولید سوله‌های صنعتی با دوام و بهینه.</p>
+                        <h3 class="service-card__title primary">سوله‌سازی</h3>
+                        <p class="service-card__desc">تولید سوله‌های صنعتی با دوام و بهینه.</p>
                     </article>
-                    <article class="service-card theme-area transition">
-                        <i class="service-card__icon transition">
+                    <article class="service-card theme-area">
+                        <i class="service-card__icon">
                             <svg fill="currentColor" height="200px" width="200px" version="1.1" id="Layer_1"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 viewBox="0 0 511.999 511.999" xml:space="preserve">
@@ -207,112 +208,59 @@
                                 </g>
                             </svg>
                         </i>
-                        <h3 class="service-card__title primary transition">پوشش سقفی</h3>
-                        <p class="service-card__desc transition">نصب پوشش‌های سقفی مدرن برای انواع ساختمان‌ها.</p>
+                        <h3 class="service-card__title primary">پوشش سقفی</h3>
+                        <p class="service-card__desc">نصب پوشش‌های سقفی مدرن برای انواع ساختمان‌ها.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="projects transition">
-            <div class="container transition">
-                <h2 class="section-title primary transition">پروژه‌های ما</h2>
-                <div class="projects__grid transition">
-                    <article class="project-card theme-area transition">
-                        <div class="project-card__media transition">
-                            <img src="https://placehold.co/600x400" alt="پروژه سوله صنعتی" loading="lazy"
-                                type="image/jpeg">
-                            <video class="project-card__video" poster="https://placehold.co/600x400" controls
-                                aria-label="ویدیو پروژه سوله صنعتی">
-                                <source src="project-video.webm" type="video/webm">
-                                <source src="project-video.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="project-card__content transition">
-                            <h3 class="project-card__title primary transition">سوله صنعتی</h3>
-                            <p class="project-card__desc transition">اجرای سوله صنعتی با فولاد مبارکه در شهرک صنعتی
-                                تهران.</p>
-                        </div>
-                    </article>
-                    <article class="project-card theme-area transition">
-                        <div class="project-card__media transition">
-                            <img src="https://placehold.co/600x400" alt="پوشش سقفی تجاری" loading="lazy">
-                            <video class="project-card__video" poster="https://placehold.co/600x400" controls
-                                aria-label="ویدیو پوشش سقفی تجاری">
-                                <source src="project-video.webm" type="video/webm">
-                                <source src="project-video.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="project-card__content transition">
-                            <h3 class="project-card__title primary transition">پوشش سقفی تجاری</h3>
-                            <p class="project-card__desc transition">نصب پوشش سقفی برای مجتمع تجاری در شیراز.</p>
-                        </div>
-                    </article>
-                    <article class="project-card theme-area transition">
-                        <div class="project-card__media transition">
-                            <img src="https://placehold.co/600x400" alt="پل فلزی" loading="lazy">
-                            <video class="project-card__video" poster="https://placehold.co/600x400" controls
-                                aria-label="ویدیو پل فلزی">
-                                <source src="project-video.webm" type="video/webm">
-                                <source src="project-video.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="project-card__content transition">
-                            <h3 class="project-card__title primary transition">پل فلزی</h3>
-                            <p class="project-card__desc transition">طراحی و اجرای پل فلزی در پروژه راه‌سازی شمال کشور.
-                            </p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="why-us" class="why-us transition">
+        <section id="why-us" class="why-us">
             <div class="container">
-                <h2 class="section-title primary transition">چرا ما را انتخاب کنید</h2>
-                <div class="why-us__grid transition">
-                    <article class="why-us-card theme-area transition">
-                        <h3 class="why-us-card__title primary transition">تجربه و تخصص</h3>
-                        <p class="why-us-card__desc transition">بیش از دو دهه تجربه در صنعت سازه‌های فلزی.</p>
+                <h2 class="section-title primary">چرا ما را انتخاب کنید</h2>
+                <div class="why-us__grid">
+                    <article class="why-us-card theme-area">
+                        <h3 class="why-us-card__title primary">تجربه و تخصص</h3>
+                        <p class="why-us-card__desc">بیش از دو دهه تجربه در صنعت سازه‌های فلزی.</p>
                     </article>
-                    <article class="why-us-card theme-area transition">
-                        <h3 class="why-us-card__title primary transition">کیفیت تضمین‌شده</h3>
-                        <p class="why-us-card__desc transition">استفاده از مواد اولیه باکیفیت و استانداردهای بالا.</p>
+                    <article class="why-us-card theme-area">
+                        <h3 class="why-us-card__title primary">کیفیت تضمین‌شده</h3>
+                        <p class="why-us-card__desc">استفاده از مواد اولیه باکیفیت و استانداردهای بالا.</p>
                     </article>
-                    <article class="why-us-card theme-area transition">
-                        <h3 class="why-us-card__title primary transition">پشتیبانی حرفه‌ای</h3>
-                        <p class="why-us-card__desc transition">تیم پشتیبانی پاسخگو و متعهد.</p>
+                    <article class="why-us-card theme-area">
+                        <h3 class="why-us-card__title primary">پشتیبانی حرفه‌ای</h3>
+                        <p class="why-us-card__desc">تیم پشتیبانی پاسخگو و متعهد.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="certificates" class="certificates transition">
-            <div class="container transition">
-                <h2 class="section-title primary transition">گواهینامه‌ها و افتخارات</h2>
-                <div class="certificates__grid transition">
-                    <article class="certificate-card theme-area transition">
+        <section id="certificates" class="certificates">
+            <div class="container">
+                <h2 class="section-title primary">گواهینامه‌ها و افتخارات</h2>
+                <div class="certificates__grid">
+                    <article class="certificate-card theme-area">
                         <img src="https://placehold.co/200x200" alt="گواهینامه ISO 9001" loading="lazy">
-                        <h3 class="certificate-card__title primary transition">ISO 9001</h3>
-                        <p class="certificate-card__desc transition">گواهینامه مدیریت کیفیت.</p>
+                        <h3 class="certificate-card__title primary">ISO 9001</h3>
+                        <p class="certificate-card__desc">گواهینامه مدیریت کیفیت.</p>
                     </article>
-                    <article class="certificate-card theme-area transition">
+                    <article class="certificate-card theme-area">
                         <img src="https://placehold.co/200x200" alt="گواهینامه استاندارد" loading="lazy">
-                        <h3 class="certificate-card__title primary transition">استاندارد CE</h3>
-                        <p class="certificate-card__desc transition">تأییدیه استاندارد اروپا.</p>
+                        <h3 class="certificate-card__title primary">استاندارد CE</h3>
+                        <p class="certificate-card__desc">تأییدیه استاندارد اروپا.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact transition">
-            <div class="container transition">
-                <h2 class="section-title primary transition">تماس با ما</h2>
-                <p class="contact__text transition">برای اطلاعات بیشتر یا همکاری، با ما در ارتباط باشید.</p>
-                <div class="contact__content transition">
-                    <div class="contact__info theme-area transition">
-                        <h3 class="contact__info-title primary transition">اطلاعات تماس</h3>
-                        <ul class="contact__info-list transition">
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title primary">تماس با ما</h2>
+                <p class="contact__text">برای اطلاعات بیشتر یا همکاری، با ما در ارتباط باشید.</p>
+                <div class="contact__content">
+                    <div class="contact__info theme-area">
+                        <h3 class="contact__info-title primary">اطلاعات تماس</h3>
+                        <ul class="contact__info-list">
                             <li>
                                 <i class="contact__info-list__icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -322,7 +270,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
                                 </i>
-                                تلفن: <span class="per-number">(045) 33640100</span>
+                                تلفن: <span class="per-number copyAction">(045) 33640100</span>
                             </li>
                             <li>
                                 <i class="contact__info-list__icon">
@@ -333,7 +281,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
                                 </i>
-                                تلفن: <span class="per-number">(045) 33640102</span>
+                                تلفن: <span class="per-number copyAction">(045) 33640102</span>
                             </li>
                             <li>
                                 <i class="contact__info-list__icon">
@@ -355,7 +303,7 @@
                                         </g>
                                     </svg>
                                 </i>
-                                فکس: <span class="per-number">(045) 33640101</span>
+                                فکس: <span class="per-number copyAction">(045) 33640101</span>
                             </li>
                             <li>
                                 <i class="contact__info-list__icon">
@@ -367,7 +315,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
                                 </i>
-                                موبایل: <span class="per-number">09141521205</span>
+                                موبایل: <span class="per-number copyAction">09141521205</span>
                             </li>
                             <li>
                                 <i class="contact__info-list__icon">
@@ -379,7 +327,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
                                 </i>
-                                موبایل: <span class="per-number">09141517995</span>
+                                موبایل: <span class="per-number copyAction">09141517995</span>
                             </li>
                             <li>
                                 <i class="contact__info-list__icon">
@@ -391,7 +339,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
                                 </i>
-                                موبایل: <span class="per-number">09120561354</span>
+                                موبایل: <span class="per-number copyAction">09120561354</span>
                             </li>
                             <li>
                                 <i class="contact__info-list__icon">
@@ -403,7 +351,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
                                 </i>
-                                موبایل: <span class="per-number">09143582659</span>
+                                موبایل: <span class="per-number copyAction">09143582659</span>
                             </li>
                             <li>
                                 <i class="contact__info-list__icon">
@@ -415,7 +363,7 @@
                                             d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
                                     </svg>
                                 </i>
-                                ایمیل: arta_omran_co@yahoo.com
+                                ایمیل: <span class="copyAction">arta_omran_co@yahoo.com</span>
                             </li>
                             <li>
                                 <i class="contact__info-list__icon">
@@ -426,24 +374,24 @@
                                             clip-rule="evenodd" />
                                     </svg>
                                 </i>
-                                آدرس: اردبیل، میدان ایثار، شهرک صنعتی شماره یک،
-                                    بلوار صنایع، بلوار سرو، تقاطع دوم، خیابان سیزدهم
+                                آدرس: <span class="copyAction">اردبیل، میدان ایثار، شهرک صنعتی شماره یک،
+                                بلوار صنایع، بلوار سرو، تقاطع دوم، خیابان سیزدهم</span>
                             </li>
                         </ul>
                     </div>
-                    <div class="contact__form theme-area transition">
-                        <h3 class="contact__form-title primary transition">ارسال پیام</h3>
+                    <div class="contact__form theme-area">
+                        <h3 class="contact__form-title primary">ارسال پیام</h3>
                         <form action="submit-form.php" method="POST">
                             <input type="text" name="name" placeholder="نام و نام خانوادگی" required
                                 aria-label="نام و نام خانوادگی">
                             <input type="email" name="email" placeholder="ایمیل" required aria-label="ایمیل">
                             <textarea name="message" placeholder="پیام شما" rows="5" required
                                 aria-label="پیام"></textarea>
-                            <button type="submit" class="contact__form-submit transition">ارسال پیام</button>
+                            <button type="submit" class="contact__form-submit">ارسال پیام</button>
                         </form>
                     </div>
                 </div>
-                <div class="contact__map theme-area transition">
+                <div class="contact__map theme-area">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3156.428684656563!2d48.34497731531618!3d38.22177397968486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x31b78c767ab0a842!2z2K7YsdmF2KzZhyDYp9ix2YfYsdmH!5e0!3m2!1sen!2sus!4v1697051234567"
                         width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
@@ -453,11 +401,11 @@
         </section>
     </main>
 
-    <footer class="footer theme-area transition">
-        <div class="container transition">
+    <footer class="footer theme-area">
+        <div class="container">
             <p>© 2025 آرتا عمران ورق. تمامی حقوق محفوظ است.</p>
-            <div class="footer__socials transition">
-                <a href="https://t.me/arta_omran_varag" class="social-link transition" aria-label="تلگرام">
+            <div class="footer__socials">
+                <a href="https://t.me/arta_omran_varag" class="social-link" aria-label="تلگرام">
                     <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -468,8 +416,7 @@
                         </g>
                     </svg>
                 </a>
-                <a href="https://www.instagram.com/arta_omran.co/" class="social-link transition"
-                    aria-label="اینستاگرام">
+                <a href="https://www.instagram.com/arta_omran.co/" class="social-link" aria-label="اینستاگرام">
                     <svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -490,7 +437,7 @@
                         </g>
                     </svg>
                 </a>
-                <a href="#" class="social-link transition" aria-label="لینکدین">
+                <a href="#" class="social-link" aria-label="لینکدین">
                     <svg viewBox="0 0 24 24" id="meteor-icon-kit__solid-linkedin" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>

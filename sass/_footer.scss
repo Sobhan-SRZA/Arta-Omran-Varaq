@@ -5,9 +5,10 @@
   padding: 4rem 0 2rem;
   position: relative;
   overflow: hidden;
+  transition: $transition;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -19,14 +20,17 @@
   p {
     margin-bottom: 2rem;
     font-size: 1rem;
+    transition: $transition;
   }
 
   &__socials {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    transition: $transition;
 
     .social-link {
+      transition: $transition;
       text-decoration: none;
       color: $text-dark;
       height: 2rem;
@@ -34,9 +38,9 @@
 
 
       &:hover {
-        color: $secondary;
         transform: scale(1.2) translateY(-5px);
-        text-shadow: 0 0 10px $secondary;
+        color: $hover;
+        filter: drop-shadow($hover-shadow);
       }
     }
   }

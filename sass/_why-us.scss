@@ -2,13 +2,16 @@
 
 .why-us {
     padding: 6rem 0;
+    transition: $transition;
 
     &__grid {
+        transition: $transition;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 2rem;
 
         .why-us-card {
+            transition: $transition;
             background: $bg-light;
             padding: 2rem;
             border-radius: $border-radius;
@@ -21,6 +24,7 @@
             }
 
             &__title {
+                transition: $transition;
                 font-size: 1.5rem;
                 color: $primary;
                 margin-bottom: 0.5rem;

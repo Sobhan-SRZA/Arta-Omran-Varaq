@@ -1,16 +1,17 @@
 @import "variable";
 
 .hero {
-  background-image: linear-gradient(to right, rgba(#F97316, 0.8) -30%, rgba(#1E3A8A, 0.8) 50%, rgba(#F97316, 0.8) 130%), url('./images/arta\ omran\ varaq.png');
+  background-image: linear-gradient(to right, rgba(#F97316, 0.8) -30%, rgba(#1E3A8A, 0.8) 50%, rgba(#F97316, 0.8) 130%), url("./images/arta\ omran\ varaq.png");
   min-height: 100vh;
   display: flex;
   align-items: center;
   text-align: center;
   position: relative;
   overflow: hidden;
+  transition: $transition;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -44,6 +45,7 @@
   }
 
   &__cta {
+    transition: $transition;
     display: inline-block;
     padding: 1rem 3rem;
     background: $secondary;
