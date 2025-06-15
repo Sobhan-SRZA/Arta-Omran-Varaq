@@ -2,6 +2,7 @@
 
 .certificates {
     padding: 6rem 0;
+    transition: $transition;
 
     &__grid {
         display: grid;
@@ -14,6 +15,7 @@
             border-radius: $border-radius;
             box-shadow: $shadow;
             text-align: center;
+            transition: $transition;
 
             &:hover {
                 transform: scale(1.05);
@@ -30,6 +32,7 @@
                 font-size: 1.3rem;
                 color: $primary;
                 margin-bottom: 0.5rem;
+  transition: $transition;
             }
 
             &__desc {

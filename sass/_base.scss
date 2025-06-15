@@ -1,6 +1,7 @@
 @import "variable";
 @import "mixin";
 
+// Fonts
 @include load-fonts;
 
 * {
@@ -16,11 +17,12 @@ html[lang=en] {
 }
 
 body {
-  font-family: 'Vazir', sans-serif;
+  font-family: "Vazir", sans-serif;
   line-height: 1.6;
   background: $bg-light;
   color: $text-dark;
   scroll-behavior: smooth;
+  transition: $transition;
 }
 
 // Themes
@@ -31,6 +33,11 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+  transition: $transition;
+}
+
+section {
+  transition: all 1s ease-in-out !important;
 }
 
 .section-title {
@@ -39,6 +46,7 @@ body {
   text-align: center;
   margin-bottom: 2rem;
   position: relative;
+  transition: $transition;
 }
 
 .animate-hidden {
@@ -52,15 +60,12 @@ body {
 }
 
 .per-number {
-  font-family: 'BYekan', sans-serif;
+  font-family: "BYekan", sans-serif;
   direction: ltr;
 }
 
-.transition {
-  transition: $transition;
-}
-
 .hover:hover {
-  color: $hover;
+  color: $hover !important;
   text-shadow: $hover-shadow;
+  filter: drop-shadow($hover-shadow);
 }
