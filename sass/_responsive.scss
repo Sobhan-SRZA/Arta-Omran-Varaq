@@ -22,9 +22,11 @@
     }
 
     .header__menu-wrapper {
+      background: transparent;
         display: none;
 
         &.active {
+      background: transparent;
             display: block;
             position: fixed;
             top: 0;

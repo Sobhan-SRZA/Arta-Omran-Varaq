@@ -29,7 +29,9 @@
     .social-link {
       text-decoration: none;
       color: $text-dark;
-      font-size: 2rem;
+      height: 2rem;
+      width: 2rem;
+
 
       &:hover {
         color: $secondary;

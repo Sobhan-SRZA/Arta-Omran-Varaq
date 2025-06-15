@@ -16,6 +16,14 @@
 
       &:hover {
         transform: scale(1.03);
+
+        img {
+          opacity: 0;
+        }
+
+        video {
+          opacity: 1;
+        }
       }
 
       &__media {
