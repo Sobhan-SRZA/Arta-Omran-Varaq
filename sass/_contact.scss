@@ -58,7 +58,7 @@
           margin-top: 0.7rem;
           height: 1.3rem;
           width: 1.3rem;
-          color: $secondary;
+          color: $primary;
           flex-shrink: 0;
         }
 
@@ -137,7 +137,7 @@
         cursor: pointer;
 
         &:hover {
-          background: darken($color: $primary, $amount: 10%);
+          background:  $primary;
           transform: translateY(-2px);
         }
       }

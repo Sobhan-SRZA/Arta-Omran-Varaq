@@ -56,8 +56,8 @@
     animation: fadeInUp $animation-duration ease-in-out;
 
     &:hover {
-      background: darken($color: $secondary, $amount: 10%);
-      box-shadow: $shadow, 0 0 15px $accent;
+      background: $secondary;
+      box-shadow: $shadow, 0 0 15px $secondary;
       transform: translateY(-5px);
     }
   }

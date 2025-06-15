@@ -80,6 +80,14 @@
         background: $base-bg-dark;
         color: $text-light;
 
+        .hero__cta {
+            background: $secondary-light;
+        }
+
+        .contact__info-list li svg {
+            color: $primary-light;
+        }
+
         .service-card__icon {
             color: $primary-light;
         }
@@ -132,6 +140,14 @@
     body.theme-light {
         background: $base-bg-light;
         color: $text-dark;
+
+        .hero__cta {
+            background: $secondary;
+        }
+
+        .contact__info-list li svg {
+            color: $primary;
+        }
 
         .service-card__icon {
             color: $primary;
