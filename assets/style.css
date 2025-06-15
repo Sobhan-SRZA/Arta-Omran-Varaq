@@ -190,7 +190,7 @@ body.theme-light .footer {
 }
 
 .per-number {
-  font-family: "BYekan", "Vazir", sans-serif;
+  font-family: "BYekan", sans-serif;
   direction: ltr;
 }
 
@@ -601,7 +601,7 @@ body.theme-light .footer {
   align-items: flex-start;
 }
 .contact__info-list li:nth-child(8) svg {
-  margin-top: 0.4rem;
+  margin-top: 0.3rem;
 }
 .contact__info-list li:last-child {
   grid-column: 1/-1;
