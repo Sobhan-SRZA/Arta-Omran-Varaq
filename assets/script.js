@@ -92,6 +92,21 @@ function main() {
             icon_x.classList.toggle("active");
         });
     });
+    document.querySelector("main")
+        .addEventListener("click", () => {
+            const isExpanded = mobileToggle.getAttribute("aria-expanded") === "true";
+            if (!isExpanded)
+                return;
+
+            mobileToggle.classList.remove("active");
+            menuWrapper.classList.remove("active");
+            mobileToggle.setAttribute("aria-expanded", "false");
+            document.body.style.overflow = "auto";
+
+            // Change mobile-toggle icon with using adding "active" class 
+            icon_bar.classList.toggle("active");
+            icon_x.classList.toggle("active");
+        })
 
     // Scroll animation (fadein when you see the section and when you don"t fadeout)
     const observer = new IntersectionObserver((entries) => {
@@ -143,6 +158,6 @@ async function copyText(text) {
 (function () {
     var redirect = sessionStorage.redirect;
     delete sessionStorage.redirect;
-    if (redirect && redirect != location.href) 
+    if (redirect && redirect != location.href)
         history.replaceState(null, null, redirect);
 })();

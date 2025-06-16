@@ -114,15 +114,17 @@
         }
 
         .header {
-            background: $fh-dark;
+            @include change-color-add-blur($fh-dark);
         }
 
         .header__mobile-toggle {
             color: $text-light;
         }
 
-        .header__menu-wrapper {
-            background: $fh-dark;
+        @media (max-width:929px) {
+            .header__menu-wrapper {
+                @include change-color-add-blur($fh-dark);
+            }
         }
 
         .social-link {
@@ -175,15 +177,17 @@
         }
 
         .header {
-            background: $fh-light;
+            @include change-color-add-blur($fh-light);
         }
 
         .header__mobile-toggle {
             color: $text-dark;
         }
 
-        .header__menu-wrapper {
-            background: $fh-light;
+        @media (max-width:929px) {
+            .header__menu-wrapper {
+                @include change-color-add-blur($fh-light);
+            }
         }
 
         .social-link {
@@ -194,4 +198,10 @@
             background: $fh-light;
         }
     }
+}
+
+// Change color and add blur effect to background
+@mixin change-color-add-blur($color) {
+    background: rgba($color, 0.7);
+    backdrop-filter: saturate(180%) blur(8px);
 }
