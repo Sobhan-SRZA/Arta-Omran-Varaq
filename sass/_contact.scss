@@ -4,12 +4,6 @@
   padding: 6rem 0;
   transition: $transition;
 
-  .container {
-    transition: $transition;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
   &__text {
     font-size: 1.5rem;
     text-align: center;
@@ -106,7 +100,7 @@
       transform: translateY(-5px);
       box-shadow: $shadow-hover;
     }
-  } 
+  }
 
 
   &__form {

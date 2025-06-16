@@ -117,14 +117,18 @@
             @include change-color-add-blur($fh-dark);
         }
 
-        .header__mobile-toggle {
-            color: $text-light;
+        .header__mobile-toggle span {
+            background: $text-light;
         }
 
         @media (max-width:929px) {
             .header__menu-wrapper {
                 @include change-color-add-blur($fh-dark);
             }
+        }
+
+        .contact__map {
+            filter: grayscale(20%) invert(100%) hue-rotate(180deg);
         }
 
         .social-link {
@@ -180,8 +184,8 @@
             @include change-color-add-blur($fh-light);
         }
 
-        .header__mobile-toggle {
-            color: $text-dark;
+        .header__mobile-toggle span {
+            background: $text-dark;
         }
 
         @media (max-width:929px) {
