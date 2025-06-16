@@ -73,14 +73,14 @@
     gap: 1.5rem;
     list-style: none;
     align-items: center;
-    background: transparent;
+    background: transparent !important;
 
     &-wrapper {
-      transition: $transition;
-      background: transparent;
+      transition: all 0.8s ease-in-out;
     }
 
     .menu-link {
+      background: transparent !important;
       transition: $transition;
       color: $text-dark;
       text-decoration: none;
@@ -94,6 +94,7 @@
   }
 
   &__controls {
+    background: transparent !important;
     transition: $transition;
     display: flex;
     gap: 1rem;
@@ -107,7 +108,7 @@
       border: none;
       font-size: 1.2rem;
       color: $text-dark;
-      background: transparent;
+      background: transparent !important;
       cursor: pointer;
 
       svg {
@@ -136,10 +137,12 @@
     .language-toggle {
       transition: $transition;
       padding: 0.5rem;
-      border: 1px solid $primary;
+      // border: 1px solid $primary;
+
+      border: none;
       outline: none;
       border-radius: 4px;
-      background: transparent;
+      background: transparent !important;
       color: $text-dark;
       cursor: pointer;
 

@@ -6,6 +6,7 @@
   position: relative;
   overflow: hidden;
   transition: $transition;
+  box-shadow: $shadow;
 
   &::before {
     content: "";

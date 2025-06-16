@@ -19,6 +19,7 @@
 
             &:hover {
                 transform: scale(1.05);
+                box-shadow: $shadow-hover;
             }
 
             img {
@@ -32,7 +33,7 @@
                 font-size: 1.3rem;
                 color: $primary;
                 margin-bottom: 0.5rem;
-  transition: $transition;
+                transition: $transition;
             }
 
             &__desc {

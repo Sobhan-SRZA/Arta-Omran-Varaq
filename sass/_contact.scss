@@ -64,6 +64,7 @@
         span {
           transition: $transition;
           cursor: pointer;
+          word-break: break-all;
         }
 
         span:hover {
@@ -103,9 +104,9 @@
 
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      box-shadow: $shadow-hover;
     }
-  }
+  } 
 
 
   &__form {
@@ -169,7 +170,7 @@
 
     &:hover {
       transform: translateY(-5px);
-      box-shadow: $shadow;
+      box-shadow: $shadow-hover;
     }
   }
 
