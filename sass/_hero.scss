@@ -1,7 +1,16 @@
 @import "variable";
 
 .hero {
-  background-image: linear-gradient(to right, rgba(#F97316, 0.8) -30%, rgba(#1E3A8A, 0.8) 50%, rgba(#F97316, 0.8) 130%), url("./images/arta\ omran\ varaq.png");
+  --bg-image: url("./images/1.jpg");
+  background:
+    linear-gradient(to right, rgba(249, 115, 22, 0.8) -30%, rgba(30, 58, 138, 0.8) 50%, rgba(249, 115, 22, 0.8) 130%),
+    var(--bg-image);
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+  background-attachment: fixed;
   min-height: 100vh;
   display: flex;
   align-items: center;

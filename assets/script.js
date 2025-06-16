@@ -114,6 +114,18 @@ function main() {
             copyText(content.textContent)
         });
     });
+
+    // Auto slide images (for hero section and it's do fadein and fadeout animation)
+    const section = document.querySelector(".hero");
+    const length = 7;
+    let count = 2;
+    setInterval(() => {
+        if (count > length)
+            count = 1;
+
+        section.style.setProperty('--bg-image', `url("./images/${count}.jpg")`);
+        count++;
+    }, 10_000);
 }
 
 async function copyText(text) {
@@ -126,3 +138,11 @@ async function copyText(text) {
         alert(selected_region.copyTextError, err);
     }
 }
+
+// For redirect url path
+(function () {
+    var redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    if (redirect && redirect != location.href) 
+        history.replaceState(null, null, redirect);
+})();

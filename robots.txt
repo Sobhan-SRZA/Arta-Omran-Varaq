@@ -1,6 +1,7 @@
 User-agent: *
 
 Allow: /
+Allow: /projects
 
 Sitemap: https://aov.ir/sitemap.xml
 Host: aov.ir
