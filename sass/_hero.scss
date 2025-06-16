@@ -1,6 +1,7 @@
 @import "variable";
 
 .hero {
+  margin-top: 4.3rem;
   --bg-image: url("./images/1.jpg");
   background:
     linear-gradient(to right, rgba(249, 115, 22, 0.8) -30%, rgba(30, 58, 138, 0.8) 50%, rgba(249, 115, 22, 0.8) 130%),
