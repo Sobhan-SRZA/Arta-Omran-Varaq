@@ -46,38 +46,29 @@
 </head>
 
 <body class="theme-light transition">
-    <header class="header transition">
-        <nav class="container header__nav transition" role="navigation" aria-label="ناوبری اصلی">
+    <header class="header">
+        <nav class="container header__nav" role="navigation" aria-label="ناوبری اصلی">
             <div class="header__logo">
-                <a href="#home" class="logo-text primary transition hover" aria-label="صفحه اصلی آرتا عمران ورق">آرتا
+                <a href="#home" class="logo-text primary hover" aria-label="صفحه اصلی آرتا عمران ورق">آرتا
                     عمران
                     ورق</a>
             </div>
-            <button class="header__mobile-toggle transition" aria-label="باز کردن منو" aria-expanded="false">
-                <svg class="header__mobile-icon icon-bar active" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                    fill="currentColor" class="size-6">
-                    <path fill-rule="evenodd"
-                        d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
-                        clip-rule="evenodd" />
-                </svg>
-                <svg class="header__mobile-icon icon-x" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                    fill="currentColor" class="size-6">
-                    <path fill-rule="evenodd"
-                        d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
-                        clip-rule="evenodd" />
-                </svg>
-            </button>
-            <div class="header__menu-wrapper transition">
-                <ul class="header__menu transition" role="menubar">
-                    <li><a href="#home" class="menu-link transition" role="menuitem">خانه</a></li>
-                    <li><a href="#about" class="menu-link transition" role="menuitem">درباره ما</a></li>
-                    <li><a href="#services" class="menu-link transition" role="menuitem">خدمات</a></li>
-                    <li><a href="#projects" class="menu-link transition" role="menuitem">پروژه‌ها</a></li>
-                    <li><a href="#why-us" class="menu-link transition" role="menuitem">چرا ما</a></li>
-                    <li><a href="#certificates" class="menu-link transition" role="menuitem">گواهینامه‌ها</a></li>
-                    <li><a href="#contact" class="menu-link transition" role="menuitem">تماس با ما</a></li>
-                    <li class="header__controls transition">
-                        <button id="theme-toggle" class="theme-toggle transition" aria-label="تغییر تم">
+            <div class="header__mobile-toggle" aria-label="باز کردن منو" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="header__menu-wrapper" id="wrapper">
+                <ul class="header__menu" role="menubar">
+                    <li><a href="#home" class="menu-link" role="menuitem">خانه</a></li>
+                    <li><a href="#about" class="menu-link" role="menuitem">درباره ما</a></li>
+                    <li><a href="#services" class="menu-link" role="menuitem">خدمات</a></li>
+                    <li><a href="projects" class="menu-link" role="menuitem">پروژه‌ها</a></li>
+                    <li><a href="#why-us" class="menu-link" role="menuitem">چرا ما</a></li>
+                    <li><a href="#certificates" class="menu-link" role="menuitem">گواهینامه‌ها</a></li>
+                    <li><a href="#contact" class="menu-link" role="menuitem">تماس با ما</a></li>
+                    <li class="header__controls">
+                        <button id="theme-toggle" class="theme-toggle" aria-label="تغییر تم">
                             <svg class="theme-toggle__icon icon-sun active" xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24" fill="currentColor" class="size-6">
                                 <path
@@ -90,7 +81,7 @@
                                     clip-rule="evenodd" />
                             </svg>
                         </button>
-                        <select id="language-toggle" class="language-toggle transition" aria-label="تغییر زبان">
+                        <select id="language-toggle" class="language-toggle" aria-label="تغییر زبان">
                             <option value="fa">فارسی</option>
                             <option value="en">English</option>
                         </select>
@@ -105,51 +96,312 @@
             <div class="container transition">
                 <h2 class="section-title primary transition">پروژه‌های ما</h2>
                 <div class="projects__grid transition">
+
                     <article class="project-card theme-area transition">
                         <div class="project-card__media transition">
-                            <img src="https://placehold.co/600x400" alt="پروژه سوله صنعتی" loading="lazy"
-                                type="image/jpeg">
-                            <video class="project-card__video" poster="https://placehold.co/600x400" controls
-                                aria-label="ویدیو پروژه سوله صنعتی">
-                                <source src="project-video.webm" type="video/webm">
-                                <source src="project-video.mp4" type="video/mp4">
-                            </video>
+                            <img src="assets/images/3000%20%D8%B1%D8%A7%D8%B3%DB%8C%20%D8%AF%D8%B4%D8%AA%20%D8%A2%D8%B0%D8%B1%D9%86%DA%AF%DB%8C%D9%86/WhatsApp%20Image%202022-06-12%20at%2020.21.27_9b96f0aa.jpg"
+                                alt="3000 راسی دشت آذرنگین" loading="lazy" type="image/jpeg">
+
                         </div>
                         <div class="project-card__content transition">
-                            <h3 class="project-card__title primary transition">سوله صنعتی</h3>
-                            <p class="project-card__desc transition">اجرای سوله صنعتی با فولاد مبارکه در شهرک صنعتی
-                                تهران.</p>
+                            <h3 class="project-card__title primary transition">3000 راسی دشت آذرنگین</h3>
+                            <p class="project-card__desc transition">توضیحات پروژه 3000 راسی دشت آذرنگین در این قسمت
+                                قرار می‌گیرد.</p>
                         </div>
                     </article>
+
                     <article class="project-card theme-area transition">
                         <div class="project-card__media transition">
-                            <img src="https://placehold.co/600x400" alt="پوشش سقفی تجاری" loading="lazy">
-                            <video class="project-card__video" poster="https://placehold.co/600x400" controls
-                                aria-label="ویدیو پوشش سقفی تجاری">
-                                <source src="project-video.webm" type="video/webm">
-                                <source src="project-video.mp4" type="video/mp4">
-                            </video>
+                            <img src="assets/images/%D8%A2%D8%A8%20%D9%85%D8%B9%D8%AF%D9%86%DB%8C%20%D9%86%DB%8C%D8%B1/WhatsApp%20Image%202022-06-12%20at%2021.13.01_72297302.jpg"
+                                alt="آب معدنی نیر" loading="lazy" type="image/jpeg">
+
                         </div>
                         <div class="project-card__content transition">
-                            <h3 class="project-card__title primary transition">پوشش سقفی تجاری</h3>
-                            <p class="project-card__desc transition">نصب پوشش سقفی برای مجتمع تجاری در شیراز.</p>
+                            <h3 class="project-card__title primary transition">آب معدنی نیر</h3>
+                            <p class="project-card__desc transition">توضیحات پروژه آب معدنی نیر در این قسمت قرار
+                                می‌گیرد.</p>
                         </div>
                     </article>
+
                     <article class="project-card theme-area transition">
                         <div class="project-card__media transition">
-                            <img src="https://placehold.co/600x400" alt="پل فلزی" loading="lazy">
-                            <video class="project-card__video" poster="https://placehold.co/600x400" controls
-                                aria-label="ویدیو پل فلزی">
-                                <source src="project-video.webm" type="video/webm">
-                                <source src="project-video.mp4" type="video/mp4">
-                            </video>
+                            <img src="assets/images/%D8%A7%D8%B1%D8%B4%D9%87%20%D9%81%D9%88%D9%84%D8%A7%D8%AF%20%D8%A2%D8%B1%D8%AF%20%D8%AE%D9%88%D8%B4%D9%87/WhatsApp%20Image%202022-06-12%20at%2020.50.05_0fd942fd.jpg"
+                                alt="ارشه فولاد آرد خوشه" loading="lazy" type="image/jpeg">
+
                         </div>
                         <div class="project-card__content transition">
-                            <h3 class="project-card__title primary transition">پل فلزی</h3>
-                            <p class="project-card__desc transition">طراحی و اجرای پل فلزی در پروژه راه‌سازی شمال کشور.
+                            <h3 class="project-card__title primary transition">ارشه فولاد آرد خوشه</h3>
+                            <p class="project-card__desc transition">توضیحات پروژه ارشه فولاد آرد خوشه در این قسمت قرار
+                                می‌گیرد.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card theme-area transition">
+                        <div class="project-card__media transition">
+                            <img src="assets/images/%D8%A7%D9%86%D8%A8%D8%A7%D8%B1%20%D8%BA%D9%84%D8%A7%D8%AA%20%D8%A7%D8%B1%D8%AF%D8%A8%DB%8C%D9%84/WhatsApp%20Image%202022-06-12%20at%2021.10.27_091578b9.jpg"
+                                alt="انبار غلات اردبیل" loading="lazy" type="image/jpeg">
+
+                        </div>
+                        <div class="project-card__content transition">
+                            <h3 class="project-card__title primary transition">انبار غلات اردبیل</h3>
+                            <p class="project-card__desc transition">توضیحات پروژه انبار غلات اردبیل در این قسمت قرار
+                                می‌گیرد.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card theme-area transition">
+                        <div class="project-card__media transition">
+                            <img src="assets/images/%D8%A8%D8%B2%20%D8%AF%D8%A7%D8%B1%DB%8C%20%D9%82%D9%84%D8%B9%D9%87%20%DA%AF%D9%86%D8%AC/WhatsApp%20Image%202022-06-12%20at%2021.06.58_d0b69cb3.jpg"
+                                alt="بز داری قلعه گنج" loading="lazy" type="image/jpeg">
+
+                        </div>
+                        <div class="project-card__content transition">
+                            <h3 class="project-card__title primary transition">بز داری قلعه گنج</h3>
+                            <p class="project-card__desc transition">توضیحات پروژه بز داری قلعه گنج در این قسمت قرار
+                                می‌گیرد.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card theme-area transition">
+                        <div class="project-card__media transition">
+                            <img src="assets/images/%D8%A8%D8%B3%D8%AA%D9%87%20%D8%A8%D9%86%D8%AF%DB%8C%20%D8%AD%D8%A8%D9%88%D8%A8%D9%88%D8%A8%D8%A7%D8%AA%20%D9%87%D8%B1%D8%B3%DB%8C%D9%86%20%DA%A9%D8%B1%D9%85%D8%A7%D9%86%D8%B4%D8%A7%D9%87/WhatsApp%20Image%202022-06-12%20at%2021.32.34_7e6ce980.jpg"
+                                alt="بسته بندی حبوبوبات هرسین کرمانشاه" loading="lazy" type="image/jpeg">
+
+                        </div>
+                        <div class="project-card__content transition">
+                            <h3 class="project-card__title primary transition">بسته بندی حبوبوبات هرسین کرمانشاه</h3>
+                            <p class="project-card__desc transition">توضیحات پروژه بسته بندی حبوبوبات هرسین کرمانشاه در
+                                این قسمت قرار
+                                می‌گیرد.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card theme-area transition">
+                        <div class="project-card__media transition">
+                            <img src="assets/images/%D8%AA%D8%B3%D9%88%DB%8C%D9%87%20%D8%AE%D8%A7%D9%86%D9%87%20%D8%B3%D8%A8%D9%84%D8%A7%D9%86/WhatsApp%20Image%202022-06-12%20at%2021.35.05_07f2e18e.jpg"
+                                alt="تسویه خانه سبلان" loading="lazy" type="image/jpeg">
+
+                        </div>
+                        <div class="project-card__content transition">
+                            <h3 class="project-card__title primary transition">تسویه خانه سبلان</h3>
+                            <p class="project-card__desc transition">توضیحات پروژه تسویه خانه سبلان در این قسمت قرار
+                                می‌گیرد.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card theme-area transition">
+                        <div class="project-card__media transition">
+                            <img src="assets/images/%D8%AF%D8%A7%D9%85%D8%AF%D8%A7%D8%B1%DB%8C%20%D8%AE%D8%B1%D9%85%20%D8%AF%D8%B1%D9%87/WhatsApp%20Image%202022-06-12%20at%2021.08.53_8dfa016c.jpg"
+                                alt="دامداری خرم دره" loading="lazy" type="image/jpeg">
+
+                        </div>
+                        <div class="project-card__content transition">
+                            <h3 class="project-card__title primary transition">دامداری خرم دره</h3>
+                            <p class="project-card__desc transition">توضیحات پروژه دامداری خرم دره در این قسمت قرار
+                                می‌گیرد.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card theme-area transition">
+                        <div class="project-card__media transition">
+                            <img src="assets/images/%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87%20%D9%81%D9%86%DB%8C%20%D8%A7%D8%B1%D8%AF%D8%A8%DB%8C%D9%84/WhatsApp%20Image%202022-06-12%20at%2021.12.12_312fb0c3.jpg"
+                                alt="دانشگاه فنی اردبیل" loading="lazy" type="image/jpeg">
+
+                        </div>
+                        <div class="project-card__content transition">
+                            <h3 class="project-card__title primary transition">دانشگاه فنی اردبیل</h3>
+                            <p class="project-card__desc transition">توضیحات پروژه دانشگاه فنی اردبیل در این قسمت قرار
+                                می‌گیرد.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card theme-area transition">
+                        <div class="project-card__media transition">
+                            <img src="assets/images/%D8%B0%D9%88%D8%A8%20%20%D8%A2%D9%87%D9%86%20%D8%A7%D8%B1%D8%AF%D8%A8%DB%8C%D9%84/WhatsApp%20Image%202022-06-12%20at%2021.09.56_603a85b6.jpg"
+                                alt="ذوب  آهن اردبیل" loading="lazy" type="image/jpeg">
+
+                        </div>
+                        <div class="project-card__content transition">
+                            <h3 class="project-card__title primary transition">ذوب آهن اردبیل</h3>
+                            <p class="project-card__desc transition">توضیحات پروژه ذوب آهن اردبیل در این قسمت قرار
+                                می‌گیرد.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card theme-area transition">
+                        <div class="project-card__media transition">
+                            <img src="assets/images/%D8%B0%D9%88%D8%A8%20%D8%A2%D9%87%D9%86%20%D8%A7%D8%B3%D9%82%D8%A7%D8%B7%20%D8%AE%D9%88%D8%AF%D8%B1%D9%88%20%DA%A9%D8%B4%D8%A7%D9%88%D8%B1%D8%B2%20%D8%A7%D8%B1%D8%AF%D8%A8%DB%8C%D9%84/WhatsApp%20Image%202025-02-05%20at%2012.42.17_b7c55391.jpg"
+                                alt="ذوب آهن اسقاط خودرو کشاورز اردبیل" loading="lazy" type="image/jpeg">
+
+                        </div>
+                        <div class="project-card__content transition">
+                            <h3 class="project-card__title primary transition">ذوب آهن اسقاط خودرو کشاورز اردبیل</h3>
+                            <p class="project-card__desc transition">توضیحات پروژه ذوب آهن اسقاط خودرو کشاورز اردبیل در
+                                این قسمت قرار
+                                می‌گیرد.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card theme-area transition">
+                        <div class="project-card__media transition">
+                            <img src="assets/images/%D8%B2%D8%B1%DB%8C%D9%86%20%D8%AE%D9%88%D8%B4%D9%87%20%D8%A7%D8%B1%D8%A7%DA%A9/WhatsApp%20Image%202025-02-04%20at%2020.06.57_44b940aa.jpg"
+                                alt="زرین خوشه اراک" loading="lazy" type="image/jpeg">
+
+                        </div>
+                        <div class="project-card__content transition">
+                            <h3 class="project-card__title primary transition">زرین خوشه اراک</h3>
+                            <p class="project-card__desc transition">توضیحات پروژه زرین خوشه اراک در این قسمت قرار
+                                می‌گیرد.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card theme-area transition">
+                        <div class="project-card__media transition">
+                            <img src="assets/images/%D8%B2%D9%85%DB%8C%D9%86%20%DA%AF%D8%B1%D9%85%D8%A7%DB%8C%D8%B4%20%D9%85%D8%B4%DA%A9%DB%8C%D9%86%C2%A0%D8%B4%D9%87%D8%B1/WhatsApp%20Image%202022-06-12%20at%2020.50.01_49b3fcd7.jpg"
+                                alt="زمین گرمایش مشکین شهر" loading="lazy" type="image/jpeg">
+
+                        </div>
+                        <div class="project-card__content transition">
+                            <h3 class="project-card__title primary transition">زمین گرمایش مشکین شهر</h3>
+                            <p class="project-card__desc transition">توضیحات پروژه زمین گرمایش مشکین شهر در این قسمت
+                                قرار می‌گیرد.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card theme-area transition">
+                        <div class="project-card__media transition">
+                            <img src="assets/images/%D8%B3%D9%88%D9%84%D9%87%206000%20%D8%B1%D8%A7%D8%B3%20%DA%AF%D8%A7%D9%88%D8%AF%D8%A7%D8%B1%DB%8C%20%D8%AE%D8%B3%D8%B1%D9%88%D8%B4%D8%A7%D9%87%20%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2/WhatsApp%20Image%202022-06-12%20at%2021.25.25_7a923503.jpg"
+                                alt="سوله 6000 راس گاوداری خسروشاه تبریز" loading="lazy" type="image/jpeg">
+
+                        </div>
+                        <div class="project-card__content transition">
+                            <h3 class="project-card__title primary transition">سوله 6000 راس گاوداری خسروشاه تبریز</h3>
+                            <p class="project-card__desc transition">توضیحات پروژه سوله 6000 راس گاوداری خسروشاه تبریز
+                                در این قسمت قرار
+                                می‌گیرد.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card theme-area transition">
+                        <div class="project-card__media transition">
+                            <img src="assets/images/%D8%B3%D9%88%D9%84%D9%87%20%D8%A2%D9%87%D9%86%20%D8%A7%D8%B3%D9%81%D9%86%D8%AC%DB%8C%20%D9%BE%D8%A7%D9%85%DB%8C%DA%A9%D9%88/WhatsApp%20Image%202025-02-05%20at%2012.44.00_bf274580.jpg"
+                                alt="سوله آهن اسفنجی پامیکو" loading="lazy" type="image/jpeg">
+
+                        </div>
+                        <div class="project-card__content transition">
+                            <h3 class="project-card__title primary transition">سوله آهن اسفنجی پامیکو</h3>
+                            <p class="project-card__desc transition">توضیحات پروژه سوله آهن اسفنجی پامیکو در این قسمت
+                                قرار می‌گیرد.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card theme-area transition">
+                        <div class="project-card__media transition">
+                            <img src="assets/images/%D8%B3%D9%88%D9%84%D9%87%20%D8%AE%D8%B4%DA%A9%D8%A8%D8%A7%D8%B1%20%D9%BE%D8%A7%D8%B1%D8%B3%20%D8%A2%D8%A8%D8%A7%D8%AF/WhatsApp%20Image%202022-06-12%20at%2021.17.39_9415766d.jpg"
+                                alt="سوله خشکبار پارس آباد" loading="lazy" type="image/jpeg">
+
+                        </div>
+                        <div class="project-card__content transition">
+                            <h3 class="project-card__title primary transition">سوله خشکبار پارس آباد</h3>
+                            <p class="project-card__desc transition">توضیحات پروژه سوله خشکبار پارس آباد در این قسمت
+                                قرار می‌گیرد.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card theme-area transition">
+                        <div class="project-card__media transition">
+                            <img src="assets/images/%D9%82%D8%A7%D8%B1%DA%86%20%D8%B3%D8%A8%D9%84%D8%A7%D9%86/WhatsApp%20Image%202022-06-12%20at%2021.16.39_bc6452e8.jpg"
+                                alt="قارچ سبلان" loading="lazy" type="image/jpeg">
+
+                        </div>
+                        <div class="project-card__content transition">
+                            <h3 class="project-card__title primary transition">قارچ سبلان</h3>
+                            <p class="project-card__desc transition">توضیحات پروژه قارچ سبلان در این قسمت قرار می‌گیرد.
                             </p>
                         </div>
                     </article>
+
+                    <article class="project-card theme-area transition">
+                        <div class="project-card__media transition">
+                            <img src="assets/images/%D9%85%D8%B4%DA%AF%DB%8C%D9%86%20%D8%B1%D8%A8%20%D8%B3%D8%A7%D8%B2%DB%8C/WhatsApp%20Image%202022-06-12%20at%2021.19.35_dbe1951e.jpg"
+                                alt="مشگین رب سازی" loading="lazy" type="image/jpeg">
+
+                        </div>
+                        <div class="project-card__content transition">
+                            <h3 class="project-card__title primary transition">مشگین رب سازی</h3>
+                            <p class="project-card__desc transition">توضیحات پروژه مشگین رب سازی در این قسمت قرار
+                                می‌گیرد.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card theme-area transition">
+                        <div class="project-card__media transition">
+                            <img src="assets/images/%D9%87%D8%AA%D9%84%20%D8%AA%D8%A7%D9%85%DB%8C%D9%86%20%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%DB%8C%20%D8%B3%D8%B1%D8%B9%DB%8C%D9%86/WhatsApp%20Image%202025-02-05%20at%2012.40.09_9f3ca5d2.jpg"
+                                alt="هتل تامین اجتماعی سرعین" loading="lazy" type="image/jpeg">
+
+                        </div>
+                        <div class="project-card__content transition">
+                            <h3 class="project-card__title primary transition">هتل تامین اجتماعی سرعین</h3>
+                            <p class="project-card__desc transition">توضیحات پروژه هتل تامین اجتماعی سرعین در این قسمت
+                                قرار می‌گیرد.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card theme-area transition">
+                        <div class="project-card__media transition">
+                            <img src="assets/images/%D9%88%D8%A7%DA%AF%D9%86%20%D8%B3%D8%A7%D8%B2%DB%8C%20%D8%A7%DB%8C%D8%B1%DB%8C%DA%A9%D9%88%C2%A0%D8%A7%D8%A8%D9%87%D8%B1%20%D8%B3%D9%88%D9%84%D9%87/WhatsApp%20Image%202022-06-12%20at%2021.05.29_8ffc5268.jpg"
+                                alt="واگن سازی ایریکو ابهر سوله" loading="lazy" type="image/jpeg">
+
+                        </div>
+                        <div class="project-card__content transition">
+                            <h3 class="project-card__title primary transition">واگن سازی ایریکو ابهر سوله</h3>
+                            <p class="project-card__desc transition">توضیحات پروژه واگن سازی ایریکو ابهر سوله در این
+                                قسمت قرار می‌گیرد.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="project-card theme-area transition">
+                        <div class="project-card__media transition">
+                            <img src="assets/images/%D9%BE%D8%B1%D9%88%DA%98%D9%87%20%D9%85%D8%A7%D8%B4%DB%8C%D9%86%20%D8%B3%D8%A7%D8%B2%DB%8C%20%DB%8C%D8%B2%D8%AF/WhatsApp%20Image%202025-02-04%20at%2020.08.23_4fd404ea.jpg"
+                                alt="پروژه ماشین سازی یزد" loading="lazy" type="image/jpeg">
+
+                        </div>
+                        <div class="project-card__content transition">
+                            <h3 class="project-card__title primary transition">پروژه ماشین سازی یزد</h3>
+                            <p class="project-card__desc transition">توضیحات پروژه پروژه ماشین سازی یزد در این قسمت قرار
+                                می‌گیرد.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card theme-area transition">
+                        <div class="project-card__media transition">
+                            <img src="assets/images/%D9%BE%D8%B1%D9%88%DA%98%D9%87%20%D9%BE%D9%84%20%D8%B4%D9%87%D8%B1%20%DA%A9%20%D9%86%D8%A7%D8%AF%D8%B1%DB%8C%20%D9%88%20%D9%BE%D9%84%20%D9%87%D9%88%D8%A7%DB%8C%DB%8C%20%D8%A7%D8%B1%D8%AF%D8%A8%DB%8C%D9%84/WhatsApp%20Image%202025-02-04%20at%2014.36.38_4493c6c7.jpg"
+                                alt="پروژه پل شهر ک نادری و پل هوایی اردبیل" loading="lazy" type="image/jpeg">
+
+                        </div>
+                        <div class="project-card__content transition">
+                            <h3 class="project-card__title primary transition">پروژه پل شهر ک نادری و پل هوایی اردبیل
+                            </h3>
+                            <p class="project-card__desc transition">توضیحات پروژه پروژه پل شهر ک نادری و پل هوایی
+                                اردبیل در این قسمت قرار
+                                می‌گیرد.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card theme-area transition">
+                        <div class="project-card__media transition">
+                            <img src="assets/images/%DA%A9%D8%A7%D8%B1%D8%AE%D8%A7%D9%86%D9%87%20MDF%20%D8%B1%D9%81%D8%B3%D9%86%D8%AC%D8%A7%D9%86/WhatsApp%20Image%202022-06-12%20at%2020.38.31_ecd43064.jpg"
+                                alt="کارخانه MDF رفسنجان" loading="lazy" type="image/jpeg">
+
+                        </div>
+                        <div class="project-card__content transition">
+                            <h3 class="project-card__title primary transition">کارخانه MDF رفسنجان</h3>
+                            <p class="project-card__desc transition">توضیحات پروژه کارخانه MDF رفسنجان در این قسمت قرار
+                                می‌گیرد.</p>
+                        </div>
+                    </article>
+
                 </div>
             </div>
         </section>
