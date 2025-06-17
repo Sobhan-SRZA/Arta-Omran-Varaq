@@ -1,7 +1,7 @@
 @import "variable";
 
 .hero {
-  margin-top: 4.3rem;
+  margin-top: 4.45rem;
   --bg-image: url("./images/1.jpg");
   background:
     linear-gradient(to right, rgba(249, 115, 22, 0.8) -30%, rgba(30, 58, 138, 0.8) 50%, rgba(249, 115, 22, 0.8) 130%),
@@ -18,7 +18,11 @@
   position: relative;
   overflow: hidden;
   transition: $transition;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 93.5%, 0% 100%);
+  box-shadow: 0 5px 10px black;
+
+  &:hover {
+    box-shadow: $shadow-hover;
+  }
 
   &::before {
     content: "";

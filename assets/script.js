@@ -1,12 +1,8 @@
 const body = document.body;
-const icon_bar = document.querySelector(".icon-bar");
-const icon_x = document.querySelector(".icon-x");
-const icon_moon = document.querySelector(".icon-moon");
-const icon_sun = document.querySelector(".icon-sun");
 const languageToggle = document.getElementById("language-toggle");
 const mobileToggle = document.querySelector(".header__mobile-toggle");
 const menuWrapper = document.querySelector(".header__menu-wrapper");
-const themeToggle = document.getElementById("theme-toggle");
+const themeToggles = document.querySelectorAll("#theme-toggle");
 const copyAction = document.querySelectorAll(".copyAction");
 
 const region = {
@@ -35,15 +31,19 @@ document.addEventListener("DOMContentLoaded", () => main());
 function main() {
 
     // Theme Toggle
-    themeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("theme-light");
-        document.body.classList.toggle("theme-dark");
-        themeToggle.classList.toggle("active");
+    themeToggles.forEach((themeToggle) => {
+        themeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("theme-light");
+            document.body.classList.toggle("theme-dark");
+            themeToggle.classList.toggle("active");
 
-        // Change theme-toggle icon with using adding "active" class 
-        icon_sun.classList.toggle("active");
-        icon_moon.classList.toggle("active");
-    });
+            // Change theme-toggle icon with using adding "active" class 
+            const icon_moons = document.querySelectorAll(".icon-moon");
+            const icon_suns = document.querySelectorAll(".icon-sun");
+            icon_moons.forEach((icon_moon) => icon_moon.classList.toggle("active"));
+            icon_suns.forEach((icon_sun) => icon_sun.classList.toggle("active"));
+        });
+    })
 
     // Language Toggle
     languageToggle.addEventListener("change", (e) => {
@@ -73,24 +73,11 @@ function main() {
         mobileToggle.classList.toggle("active");
         menuWrapper.classList.toggle("active");
 
-        // Change mobile-toggle icon with using adding "active" class 
-        icon_bar.classList.toggle("active");
-        icon_x.classList.toggle("active");
-
         document.body.style.overflow = isExpanded ? "auto" : "hidden";
     });
     // Close menu when any option clicked
     document.querySelectorAll(".menu-link").forEach(link => {
-        link.addEventListener("click", () => {
-            mobileToggle.classList.remove("active");
-            menuWrapper.classList.remove("active");
-            mobileToggle.setAttribute("aria-expanded", "false");
-            document.body.style.overflow = "auto";
-
-            // Change mobile-toggle icon with using adding "active" class 
-            icon_bar.classList.toggle("active");
-            icon_x.classList.toggle("active");
-        });
+        link.addEventListener("click", () => toggleClose);
     });
     document.querySelector("main")
         .addEventListener("click", () => {
@@ -98,17 +85,10 @@ function main() {
             if (!isExpanded)
                 return;
 
-            mobileToggle.classList.remove("active");
-            menuWrapper.classList.remove("active");
-            mobileToggle.setAttribute("aria-expanded", "false");
-            document.body.style.overflow = "auto";
-
-            // Change mobile-toggle icon with using adding "active" class 
-            icon_bar.classList.toggle("active");
-            icon_x.classList.toggle("active");
+            toggleClose();
         })
 
-    // Scroll animation (fadein when you see the section and when you don"t fadeout)
+    // Scroll animation (fadein when you see the section and when you don't fadeout)
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting)
@@ -143,6 +123,7 @@ function main() {
     }, 10_000);
 }
 
+// Save text in user clipboard
 async function copyText(text) {
     const isEnglish = document.documentElement.lang === "en";
     const selected_region = isEnglish ? region.en : region.fa;
@@ -161,3 +142,11 @@ async function copyText(text) {
     if (redirect && redirect != location.href)
         history.replaceState(null, null, redirect);
 })();
+
+// Mobile Toggle close
+function toggleClose() {
+    mobileToggle.classList.remove("active");
+    menuWrapper.classList.remove("active");
+    mobileToggle.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "auto";
+}

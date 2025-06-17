@@ -7,6 +7,7 @@
   box-shadow: $shadow;
   transition: $transition;
   z-index: 1;
+  max-height: 5rem;
 
   &__nav {
     transition: $transition;
@@ -30,6 +31,16 @@
       color: $primary;
       text-decoration: none;
     }
+  }
+
+  &__mobile-theme-toggle {
+    display: none !important;
+    position: absolute !important;
+    visibility: hidden !important;
+    top: 50% !important;
+    left: 1rem !important;
+    transform: translateY(-50%) !important;
+    padding: 0 !important;
   }
 
   &__mobile-toggle {
@@ -115,39 +126,6 @@
     list-style: none;
     align-items: center;
 
-    .theme-toggle {
-      transition: $transition;
-      height: 1.8rem;
-      width: 1.8rem;
-      border: none;
-      font-size: 1.2rem;
-      color: $text-dark;
-      background: transparent !important;
-      cursor: pointer;
-
-      svg {
-        position: absolute;
-        height: 1.8rem;
-        width: 1.8rem;
-        margin: 0;
-        padding: 0;
-        transform: translate(50%, -50%);
-        opacity: 0;
-        transition: $transition;
-
-        &.active {
-          opacity: 1;
-          transition: $transition;
-        }
-      }
-
-      &:hover {
-        filter: drop-shadow($hover-shadow);
-        color: $hover;
-        text-shadow: $hover-shadow;
-      }
-    }
-
     .language-toggle {
       transition: $transition;
       padding: 0.5rem;
@@ -164,5 +142,38 @@
         text-shadow: $hover-shadow;
       }
     }
+  }
+}
+
+.theme-toggle {
+  transition: $transition;
+  height: 1.8rem;
+  width: 1.8rem;
+  border: none;
+  font-size: 1.2rem;
+  color: $text-dark;
+  background: transparent !important;
+  cursor: pointer;
+
+  svg {
+    position: absolute;
+    height: 1.8rem;
+    width: 1.8rem;
+    margin: 0;
+    padding: 0;
+    transform: translate(50%, -50%);
+    opacity: 0;
+    transition: $transition;
+
+    &.active {
+      opacity: 1;
+      transition: $transition;
+    }
+  }
+
+  &:hover {
+    filter: drop-shadow($hover-shadow) !important;
+    color: $hover  !important;
+    text-shadow: $hover-shadow !important;
   }
 }

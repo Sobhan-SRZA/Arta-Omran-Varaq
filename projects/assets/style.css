@@ -118,7 +118,7 @@ body.theme-dark .menu-link {
 
 body.theme-dark .header {
   background: rgba(48, 48, 49, 0.7);
-  backdrop-filter: saturate(180%) blur(8px);
+  backdrop-filter: saturate(180%) blur(12px);
 }
 
 body.theme-dark .header__mobile-toggle span {
@@ -128,7 +128,7 @@ body.theme-dark .header__mobile-toggle span {
 @media (max-width: 929px) {
   body.theme-dark .header__menu-wrapper {
     background: rgba(48, 48, 49, 0.7);
-    backdrop-filter: saturate(180%) blur(8px);
+    backdrop-filter: saturate(180%) blur(12px);
   }
 }
 
@@ -169,7 +169,7 @@ body.theme-light .menu-link {
 
 body.theme-light .header {
   background: rgba(250, 246, 235, 0.7);
-  backdrop-filter: saturate(180%) blur(8px);
+  backdrop-filter: saturate(180%) blur(12px);
 }
 
 body.theme-light .header__mobile-toggle span {
@@ -179,7 +179,7 @@ body.theme-light .header__mobile-toggle span {
 @media (max-width: 929px) {
   body.theme-light .header__menu-wrapper {
     background: rgba(250, 246, 235, 0.7);
-    backdrop-filter: saturate(180%) blur(8px);
+    backdrop-filter: saturate(180%) blur(12px);
   }
 }
 
@@ -413,6 +413,7 @@ section {
 
 .projects__grid .project-card:hover {
   transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* .projects__grid .project-card:hover img {
