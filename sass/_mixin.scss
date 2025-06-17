@@ -207,5 +207,5 @@
 // Change color and add blur effect to background
 @mixin change-color-add-blur($color) {
     background: rgba($color, 0.7);
-    backdrop-filter: saturate(180%) blur(8px);
+    backdrop-filter: saturate(180%) blur(12px);
 }

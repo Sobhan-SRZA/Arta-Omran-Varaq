@@ -1,7 +1,7 @@
 @import "variable";
 
 .about {
-  padding: 8rem 0;
+  padding: 4rem 0;
   transition: $transition;
   justify-content: space-between;
   word-break: keep-all;
@@ -9,8 +9,9 @@
   margin-bottom: 6rem;
 
   .section-title {
-    padding-right: 3rem;
-    text-align: right;
+    // padding-right: -20rem;
+    text-align: right;  
+    // right: 0;
   }
 
   &__text {
@@ -26,11 +27,11 @@
   }
 
   &__gallery {
-    top: 45%;
+    top: 18rem;
     left: -10%;
     position: absolute;
     width: calc((100% - 6rem) / 2);
-    transform: translate(50%, -50%);
+    transform: translateX(50%);
 
     img {
       position: absolute;

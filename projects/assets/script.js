@@ -5,24 +5,15 @@ const languageToggle = document.getElementById("language-toggle");
 const mobileToggle = document.querySelector(".header__mobile-toggle");
 const menuWrapper = document.querySelector(".header__menu-wrapper");
 const themeToggle = document.getElementById("theme-toggle");
-const copyAction = document.querySelectorAll(".copyAction");
-
+    
 const region = {
     en: {
         "logo-text": "Arta Omran Varagh",
-        "menu-link": ["Home", "About Us", "Services", "Projects", "Why Us", "Certificates", "Contact Us"],
-        "hero__title": "Arta Omran Varagh",
-        "hero__subtitle": "Representative of Mobarakeh Steel, Leading in Metal Structures",
-        "copyText": "Text copied to clipboard.",
-        "copyTextError": "Failed to copy text: "
+        "menu-link": ["Home", "About Us", "Services", "Projects", "Why Us", "Certificates", "Contact Us"]
     },
     fa: {
         "logo-text": "آرتا عمران ورق",
-        "menu-link": ["خانه", "درباره ما", "خدمات", "پروژه‌ها", "چرا ما", "گواهینامه‌ها", "تماس با ما"],
-        "hero__title": "آرتا عمران ورق",
-        "hero__subtitle": "نماینده فولاد مبارکه و پیشرو در سازه‌های فلزی",
-        "copyText": "متن در کیبورد شما ذخیره شد.",
-        "copyTextError": "کپی کردن متن در کیبورد به مشکل برخورد: "
+        "menu-link": ["خانه", "درباره ما", "خدمات", "پروژه‌ها", "چرا ما", "گواهینامه‌ها", "تماس با ما"]
     }
 }
 
@@ -70,7 +61,6 @@ function main() {
         mobileToggle.setAttribute("aria-expanded", !isExpanded);
         mobileToggle.classList.toggle("active");
         menuWrapper.classList.toggle("active");
-
         document.body.style.overflow = isExpanded ? "auto" : "hidden";
     });
     // Close menu when any option clicked
@@ -103,47 +93,9 @@ function main() {
             else
                 entry.target.classList.remove("animate");
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.01 });
     document.querySelectorAll("section").forEach(section => {
         section.classList.add("animate-hidden");
         observer.observe(section);
     });
-
-    // Copy the text
-    copyAction.forEach(content => {
-        content.addEventListener("click", (e) => {
-            copyText(content.textContent)
-        });
-    });
-
-    // Auto slide images (for hero section and it's do fadein and fadeout animation)
-    const section = document.querySelector(".hero");
-    const length = 7;
-    let count = 2;
-    setInterval(() => {
-        if (count > length)
-            count = 1;
-
-        section.style.setProperty('--bg-image', `url("./images/${count}.jpg")`);
-        count++;
-    }, 10_000);
 }
-
-async function copyText(text) {
-    const isEnglish = document.documentElement.lang === "en";
-    const selected_region = isEnglish ? region.en : region.fa;
-    try {
-        await navigator.clipboard.writeText(text);
-        alert(selected_region.copyText);
-    } catch (err) {
-        alert(selected_region.copyTextError, err);
-    }
-}
-
-// For redirect url path
-(function () {
-    var redirect = sessionStorage.redirect;
-    delete sessionStorage.redirect;
-    if (redirect && redirect != location.href)
-        history.replaceState(null, null, redirect);
-})();

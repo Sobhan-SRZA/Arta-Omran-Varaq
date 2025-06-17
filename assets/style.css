@@ -107,7 +107,7 @@ body.theme-dark .menu-link {
 }
 body.theme-dark .header {
   background: rgba(48, 48, 49, 0.7);
-  backdrop-filter: saturate(180%) blur(8px);
+  backdrop-filter: saturate(180%) blur(12px);
 }
 body.theme-dark .header__mobile-toggle span {
   background: #E5E7EB;
@@ -115,7 +115,7 @@ body.theme-dark .header__mobile-toggle span {
 @media (max-width: 929px) {
   body.theme-dark .header__menu-wrapper {
     background: rgba(48, 48, 49, 0.7);
-    backdrop-filter: saturate(180%) blur(8px);
+    backdrop-filter: saturate(180%) blur(12px);
   }
 }
 body.theme-dark .contact__map {
@@ -159,7 +159,7 @@ body.theme-light .menu-link {
 }
 body.theme-light .header {
   background: rgba(250, 246, 235, 0.7);
-  backdrop-filter: saturate(180%) blur(8px);
+  backdrop-filter: saturate(180%) blur(12px);
 }
 body.theme-light .header__mobile-toggle span {
   background: #374151;
@@ -167,7 +167,7 @@ body.theme-light .header__mobile-toggle span {
 @media (max-width: 929px) {
   body.theme-light .header__menu-wrapper {
     background: rgba(250, 246, 235, 0.7);
-    backdrop-filter: saturate(180%) blur(8px);
+    backdrop-filter: saturate(180%) blur(12px);
   }
 }
 body.theme-light .social-link {
@@ -375,7 +375,6 @@ section {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 93.5%, 0% 100%);
 }
 .hero::before {
   content: "";
@@ -426,8 +425,16 @@ section {
   transform: translateY(-5px);
 }
 
+@keyframes wave {
+  0%, 100% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 80% 90%, 60% 80%, 40% 90%, 20% 80%, 0% 90%);
+  }
+  50% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 80% 80%, 60% 90%, 40% 80%, 20% 90%, 0% 80%);
+  }
+}
 .about {
-  padding: 8rem 0;
+  padding: 4rem 0;
   transition: all 0.3s ease-in-out;
   justify-content: space-between;
   word-break: keep-all;
@@ -435,7 +442,6 @@ section {
   margin-bottom: 6rem;
 }
 .about .section-title {
-  padding-right: 3rem;
   text-align: right;
 }
 .about__text {
@@ -450,11 +456,11 @@ section {
   transition: all 0.3s ease-in-out;
 }
 .about__gallery {
-  top: 45%;
+  top: 18rem;
   left: -10%;
   position: absolute;
   width: calc((100% - 6rem) / 2);
-  transform: translate(50%, -50%);
+  transform: translateX(50%);
 }
 .about__gallery img {
   position: absolute;
