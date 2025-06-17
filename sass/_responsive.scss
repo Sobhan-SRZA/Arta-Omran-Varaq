@@ -1,3 +1,17 @@
+// About image gallery
+@media (max-width: 1050px) {
+    .about {
+        &__gallery {
+            left: 0;
+            margin-left: 40% !important;
+
+            img {
+                max-width: 20rem !important;
+            }
+        }
+    }
+}
+
 // Hero and all section title
 @media (max-width: 991px) {
     .section-title {
@@ -19,38 +33,8 @@
     }
 
     .header__mobile-theme-toggle {
-        display: block;
-        position: absolute;
-        transition: $transition;
-        height: 1.8rem;
-        width: 1.8rem;
-        border: none;
-        font-size: 1.2rem;
-        color: $text-dark;
-        background: transparent !important;
-        cursor: pointer;
-
-        svg {
-            position: absolute;
-            height: 1.8rem;
-            width: 1.8rem;
-            margin: 0;
-            padding: 0;
-            transform: translate(50%, -50%);
-            opacity: 0;
-            transition: $transition;
-
-            &.active {
-                opacity: 1;
-                transition: $transition;
-            }
-        }
-
-        &:hover {
-            filter: drop-shadow($hover-shadow);
-            color: $hover;
-            text-shadow: $hover-shadow;
-        }
+        display: block !important;
+        visibility: visible !important;
     }
 
     .header__menu {
@@ -107,7 +91,16 @@
 // About image gallery
 @media (max-width: 800px) {
     .about {
+        margin-bottom: -10rem;
+
+        .section-title {
+            margin-right: 0;
+            width: auto;
+        }
+
         &__gallery {
+            left: auto;
+
             img {
                 max-width: 20rem !important;
             }
@@ -145,6 +138,8 @@
 // About image gallery
 @media (max-width: 650px) {
     .about {
+        margin-bottom: -15rem;
+
         &__gallery {
             margin-top: 14rem !important;
             width: calc((100% - 0rem) / 10);
@@ -211,8 +206,10 @@
 
 @media (max-width: 300px) {
     .about {
+        margin-bottom: -15rem;
+
         &__gallery {
-            margin-top: 30rem !important;
+            margin-top: 25rem !important;
 
             img {
                 max-width: 240rem;

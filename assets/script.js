@@ -1,10 +1,8 @@
 const body = document.body;
-const icon_moon = document.querySelector(".icon-moon");
-const icon_sun = document.querySelector(".icon-sun");
 const languageToggle = document.getElementById("language-toggle");
 const mobileToggle = document.querySelector(".header__mobile-toggle");
 const menuWrapper = document.querySelector(".header__menu-wrapper");
-const themeToggle = document.getElementById("theme-toggle");
+const themeToggles = document.querySelectorAll("#theme-toggle");
 const copyAction = document.querySelectorAll(".copyAction");
 
 const region = {
@@ -33,15 +31,19 @@ document.addEventListener("DOMContentLoaded", () => main());
 function main() {
 
     // Theme Toggle
-    themeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("theme-light");
-        document.body.classList.toggle("theme-dark");
-        themeToggle.classList.toggle("active");
+    themeToggles.forEach((themeToggle) => {
+        themeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("theme-light");
+            document.body.classList.toggle("theme-dark");
+            themeToggle.classList.toggle("active");
 
-        // Change theme-toggle icon with using adding "active" class 
-        icon_sun.classList.toggle("active");
-        icon_moon.classList.toggle("active");
-    });
+            // Change theme-toggle icon with using adding "active" class 
+            const icon_moons = document.querySelectorAll(".icon-moon");
+            const icon_suns = document.querySelectorAll(".icon-sun");
+            icon_moons.forEach((icon_moon) => icon_moon.classList.toggle("active"));
+            icon_suns.forEach((icon_sun) => icon_sun.classList.toggle("active"));
+        });
+    })
 
     // Language Toggle
     languageToggle.addEventListener("change", (e) => {
@@ -86,7 +88,7 @@ function main() {
             toggleClose();
         })
 
-    // Scroll animation (fadein when you see the section and when you don"t fadeout)
+    // Scroll animation (fadein when you see the section and when you don't fadeout)
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting)

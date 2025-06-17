@@ -1,7 +1,7 @@
 @import "variable";
 
 .hero {
-  margin-top: 4.3rem;
+  margin-top: 4.45rem;
   --bg-image: url("./images/1.jpg");
   background:
     linear-gradient(to right, rgba(249, 115, 22, 0.8) -30%, rgba(30, 58, 138, 0.8) 50%, rgba(249, 115, 22, 0.8) 130%),
@@ -18,15 +18,11 @@
   position: relative;
   overflow: hidden;
   transition: $transition;
-  // clip-path: polygon(0% 0%,
-  //     100% 0%,
-  //     100% 80%,
-  //     70% 90%,
-  //     60% 80%,
-  //     40% 90%,
-  //     20% 80%,
-  //     0% 90%);
-  // animation: wave 4s ease-in-out infinite;
+  box-shadow: 0 5px 10px black;
+
+  &:hover {
+    box-shadow: $shadow-hover;
+  }
 
   &::before {
     content: "";
@@ -80,31 +76,5 @@
       box-shadow: $shadow, 0 0 15px $secondary;
       transform: translateY(-5px);
     }
-  }
-}
-
-@keyframes wave {
-
-  0%,
-  100% {
-    clip-path: polygon(0% 0%,
-        100% 0%,
-        100% 80%,
-        80% 90%,
-        60% 80%,
-        40% 90%,
-        20% 80%,
-        0% 90%);
-  }
-
-  50% {
-    clip-path: polygon(0% 0%,
-        100% 0%,
-        100% 80%,
-        80% 80%,
-        60% 90%,
-        40% 80%,
-        20% 90%,
-        0% 80%);
   }
 }
