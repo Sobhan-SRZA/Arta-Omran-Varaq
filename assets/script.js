@@ -75,12 +75,7 @@ function main() {
     });
     // Close menu when any option clicked
     document.querySelectorAll(".menu-link").forEach(link => {
-        link.addEventListener("click", () => {
-            mobileToggle.classList.remove("active");
-            menuWrapper.classList.remove("active");
-            mobileToggle.setAttribute("aria-expanded", "false");
-            document.body.style.overflow = "auto";
-        });
+        link.addEventListener("click", () => toggleClose);
     });
     document.querySelector("main")
         .addEventListener("click", () => {
@@ -88,10 +83,7 @@ function main() {
             if (!isExpanded)
                 return;
 
-            mobileToggle.classList.remove("active");
-            menuWrapper.classList.remove("active");
-            mobileToggle.setAttribute("aria-expanded", "false");
-            document.body.style.overflow = "auto";
+            toggleClose();
         })
 
     // Scroll animation (fadein when you see the section and when you don"t fadeout)
@@ -129,6 +121,7 @@ function main() {
     }, 10_000);
 }
 
+// Save text in user clipboard
 async function copyText(text) {
     const isEnglish = document.documentElement.lang === "en";
     const selected_region = isEnglish ? region.en : region.fa;
@@ -147,3 +140,11 @@ async function copyText(text) {
     if (redirect && redirect != location.href)
         history.replaceState(null, null, redirect);
 })();
+
+// Mobile Toggle close
+function toggleClose() {
+    mobileToggle.classList.remove("active");
+    menuWrapper.classList.remove("active");
+    mobileToggle.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "auto";
+}

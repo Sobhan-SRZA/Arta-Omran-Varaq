@@ -89,6 +89,10 @@
           align-items: flex-start;
           margin-top: 2rem;
 
+          span {
+            word-break: keep-all;
+          }
+
           svg {
             margin-top: 0.3rem;
           }
@@ -172,12 +176,13 @@
     transition: $transition;
     border-radius: $border-radius;
     overflow: hidden;
-    box-shadow: $shadow;
+    box-shadow: $shadow !important;
     height: 400px;
     width: 100%;
 
     &:hover {
-      transform: scale(1.02);
+      transform: translateY(-5px);
+      box-shadow: $shadow-hover !important;
     }
   }
 }

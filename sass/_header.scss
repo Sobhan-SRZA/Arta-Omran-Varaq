@@ -32,6 +32,10 @@
     }
   }
 
+  &__mobile-theme-toggle {
+    display: none;
+  }
+
   &__mobile-toggle {
     cursor: pointer;
     display: flex;
