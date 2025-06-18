@@ -145,10 +145,10 @@
 // About image gallery
 @media (max-width: 650px) {
     .about {
-        margin-bottom: 3rem;
+        margin-bottom: 8rem;
 
         &__gallery {
-            margin-top: 14rem !important;
+            margin-top: 28rem !important;
             width: calc((100% - 0rem) / 10);
 
             img {
@@ -177,10 +177,10 @@
 // About image gallery
 @media (max-width: 500px) {
     .about {
-        margin-bottom: 5rem;
+        margin-bottom: 15rem;
 
         &__gallery {
-            margin-top: 19rem !important;
+            margin-top: 35rem !important;
 
             img {
                 width: 12rem !important;
@@ -204,7 +204,7 @@
 @media (max-width: 385px) {
     .about {
         &__gallery {
-            margin-top: 22rem !important;
+            margin-top: 39rem !important;
 
             img {
                 width: 9rem !important;
@@ -213,10 +213,12 @@
     }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 338px) {
     .about {
+        margin-bottom: 25rem;
+
         &__gallery {
-            margin-top: 25rem !important;
+            margin-top: 45rem !important;
 
             img {
                 max-width: 240rem;
