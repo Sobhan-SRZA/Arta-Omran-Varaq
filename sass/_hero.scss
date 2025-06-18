@@ -43,10 +43,11 @@
   }
 
   &__title {
+    transition: $transition;
     font-size: 5rem;
-    color: $bg-light;
+    color: $hover;
     margin-bottom: 1.5rem;
-    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 4px 8px $hover;
     animation: slideInLeft $animation-duration ease-out;
   }
 
