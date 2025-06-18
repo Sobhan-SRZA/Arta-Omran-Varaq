@@ -6,6 +6,8 @@
   "scripts": {
     "watch:projects": "sass projects/sass/main.scss projects/assets/style.css --watch",
     "watch": "sass sass/main.scss assets/style.css --watch",
+    "start:projects": "sass projects/sass/main.scss projects/assets/style.css",
+    "start": "sass sass/main.scss assets/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

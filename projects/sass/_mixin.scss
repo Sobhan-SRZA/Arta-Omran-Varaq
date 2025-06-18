@@ -115,7 +115,7 @@
 
         @media (max-width:929px) {
             .header__menu-wrapper {
-                @include change-color-add-blur($fh-dark);
+                @include change-color($fh-dark);
             }
         }
 
@@ -174,7 +174,7 @@
 
         @media (max-width:929px) {
             .header__menu-wrapper {
-                @include change-color-add-blur($fh-light);
+                @include change-color($fh-light);
             }
         }
 
@@ -192,4 +192,8 @@
 @mixin change-color-add-blur($color) {
     background: rgba($color, 0.7);
     backdrop-filter: saturate(180%) blur(12px);
+}
+
+@mixin change-color($color) {
+    background: $color;
 }
