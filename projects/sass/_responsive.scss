@@ -1,33 +1,11 @@
-// About image gallery
-@media (max-width: 1050px) {
-    .about {
-        &__gallery {
-            left: 0;
-            margin-left: 40% !important;
-
-            img {
-                max-width: 20rem !important;
-            }
-        }
-    }
-}
-
 // Hero and all section title
 @media (max-width: 991px) {
     .section-title {
         font-size: 2rem;
     }
 
-    .hero__title {
-        font-size: 2.8rem;
-    }
-
-    .hero__subtitle {
-        font-size: 1.2rem;
-    }
-
-    .hero__cta {
-        font-size: 0.9rem;
+    .projects__grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 }
 
@@ -97,31 +75,8 @@
 }
 
 
-// About image gallery
-@media (max-width: 800px) {
-    .about {
-        .section-title {
-            margin-right: 0;
-            width: auto;
-        }
-
-        &__gallery {
-            left: auto;
-
-            img {
-                max-width: 20rem !important;
-            }
-        }
-    }
-}
-
-
 // Others (hero, contact (contact container, info, map))
 @media (max-width: 767px) {
-    .hero {
-        min-height: 90vh;
-    }
-
     .contact {
         .container {
             display: flex;
@@ -142,50 +97,10 @@
 }
 
 
-// About image gallery
-@media (max-width: 650px) {
-    .about {
-        margin-bottom: 3rem;
-
-        &__gallery {
-            margin-top: 14rem !important;
-            width: calc((100% - 0rem) / 10);
-
-            img {
-                width: 15rem !important;
-            }
-
-            img:first-child {
-                top: 1rem !important;
-            }
-
-            img:last-child {
-                top: 5rem !important;
-                right: -5rem;
-            }
-        }
-    }
-}
-
-// Hero title
+// Projects grid
 @media (max-width: 575px) {
-    .hero__title {
-        font-size: 1.8rem;
-    }
-}
-
-// About image gallery
-@media (max-width: 500px) {
-    .about {
-        margin-bottom: 5rem;
-
-        &__gallery {
-            margin-top: 19rem !important;
-
-            img {
-                width: 12rem !important;
-            }
-        }
+    .projects__grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -195,33 +110,6 @@
     .header__menu-wrapper {
         &.active {
             width: 100%;
-        }
-    }
-}
-
-
-// About image gallery
-@media (max-width: 385px) {
-    .about {
-        &__gallery {
-            margin-top: 22rem !important;
-
-            img {
-                width: 9rem !important;
-            }
-        }
-    }
-}
-
-@media (max-width: 300px) {
-    .about {
-        &__gallery {
-            margin-top: 25rem !important;
-
-            img {
-                max-width: 240rem;
-                width: 8rem !important;
-            }
         }
     }
 }

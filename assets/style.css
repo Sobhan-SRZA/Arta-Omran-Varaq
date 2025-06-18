@@ -63,7 +63,7 @@
   box-sizing: border-box;
 }
 
-html[lang=en] .header__controls .theme-toggle svg {
+html[lang=en] .theme-toggle svg {
   transform: translate(-50%, -50%);
 }
 
@@ -225,7 +225,7 @@ section {
   box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
   z-index: 1;
-  max-height: 5rem;
+  height: 4.5rem;
 }
 .header__nav {
   transition: all 0.3s ease-in-out;
@@ -371,7 +371,7 @@ section {
 }
 
 .hero {
-  margin-top: 4.45rem;
+  margin-top: 4.5rem;
   --bg-image: url("./images/1.jpg");
   background: linear-gradient(to right, rgba(249, 115, 22, 0.8) -30%, rgba(30, 58, 138, 0.8) 50%, rgba(249, 115, 22, 0.8) 130%), var(--bg-image);
   background-repeat: no-repeat;
@@ -445,7 +445,7 @@ section {
   transition: all 0.3s ease-in-out;
   word-break: keep-all;
   height: 100vh;
-  margin-bottom: -2rem;
+  margin-bottom: 10rem;
 }
 .about .section-title {
   margin-right: 1rem;
@@ -819,6 +819,12 @@ section {
   .hero__title {
     font-size: 2.8rem;
   }
+  .hero__subtitle {
+    font-size: 1.2rem;
+  }
+  .hero__cta {
+    font-size: 0.9rem;
+  }
 }
 @media (max-width: 929px) {
   .header__mobile-toggle {
@@ -848,9 +854,6 @@ section {
     justify-content: center;
     z-index: 999;
   }
-  .header__menu-wrapper .theme-toggle {
-    display: none;
-  }
   .header__menu-wrapper.active {
     opacity: 1;
     position: fixed;
@@ -873,11 +876,12 @@ section {
     gap: 1.5rem;
     margin-top: 2rem;
   }
+  .header__menu .header__controls .theme-toggle {
+    display: none !important;
+    visibility: hidden !important;
+  }
 }
 @media (max-width: 800px) {
-  .about {
-    margin-bottom: -10rem;
-  }
   .about .section-title {
     margin-right: 0;
     width: auto;
@@ -909,7 +913,7 @@ section {
 }
 @media (max-width: 650px) {
   .about {
-    margin-bottom: -15rem;
+    margin-bottom: 3rem;
   }
   .about__gallery {
     margin-top: 14rem !important;
@@ -932,6 +936,9 @@ section {
   }
 }
 @media (max-width: 500px) {
+  .about {
+    margin-bottom: 5rem;
+  }
   .about__gallery {
     margin-top: 19rem !important;
   }
@@ -953,9 +960,6 @@ section {
   }
 }
 @media (max-width: 300px) {
-  .about {
-    margin-bottom: -15rem;
-  }
   .about__gallery {
     margin-top: 25rem !important;
   }

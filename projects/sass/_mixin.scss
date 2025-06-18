@@ -1,0 +1,195 @@
+// Fonts
+@mixin load-fonts {
+    @font-face {
+        font-family: "BYekan";
+        src: url("../../assets/font/BYekan.ttf") format("woff2");
+    }
+
+    @font-face {
+        font-family: "Vazir";
+        src: url("../../assets/font/Vazir.ttf") format("woff2");
+    }
+}
+
+// Animations
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes spark {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100px, -100px);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Dark Theme
+@mixin dark-mode {
+    body.theme-dark {
+        background: $base-bg-dark;
+        color: $text-light;
+
+        .contact__info-list li svg {
+            color: $primary-light;
+        }
+
+        .theme-area {
+            background: $bg-dark;
+            color: $text-light;
+        }
+
+        .primary {
+            color: $primary-light;
+        }
+
+        .theme-toggle {
+            color: $text-light;
+        }
+
+        .language-toggle {
+            color: $text-light;
+        }
+
+        .menu-link {
+            color: $text-light;
+        }
+
+        .header {
+            @include change-color-add-blur($fh-dark);
+        }
+
+        .header__mobile-toggle span {
+            background: $text-light;
+        }
+
+        @media (max-width:929px) {
+            .header__menu-wrapper {
+                @include change-color-add-blur($fh-dark);
+            }
+        }
+
+        .contact__map {
+            filter: grayscale(20%) invert(100%) hue-rotate(180deg);
+        }
+
+        .social-link {
+            color: $text-light;
+        }
+
+        .footer {
+            background: $fh-dark;
+        }
+    }
+}
+
+// Light Theme
+@mixin light-mode {
+    body.theme-light {
+        background: $base-bg-light;
+        color: $text-dark;
+
+        .contact__info-list li svg {
+            color: $primary;
+        }
+
+        .theme-area {
+            background-color: $fh-light;
+            color: $text-dark;
+        }
+
+        .primary {
+            color: $primary;
+        }
+
+        .theme-toggle {
+            color: $text-dark;
+        }
+
+        .language-toggle {
+            color: $text-dark;
+        }
+
+        .menu-link {
+            color: $text-dark;
+        }
+
+        .header {
+            @include change-color-add-blur($fh-light);
+        }
+
+        .header__mobile-toggle span {
+            background: $text-dark;
+        }
+
+        @media (max-width:929px) {
+            .header__menu-wrapper {
+                @include change-color-add-blur($fh-light);
+            }
+        }
+
+        .social-link {
+            color: $text-dark;
+        }
+
+        .footer {
+            background: $fh-light;
+        }
+    }
+}
+
+// Change color and add blur effect to background
+@mixin change-color-add-blur($color) {
+    background: rgba($color, 0.7);
+    backdrop-filter: saturate(180%) blur(12px);
+}
