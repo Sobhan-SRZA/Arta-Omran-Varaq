@@ -51,11 +51,11 @@
 }
 @font-face {
   font-family: "BYekan";
-  src: url("./font/BYekan.ttf") format("woff2");
+  src: url("../../assets/font/BYekan.ttf") format("woff2");
 }
 @font-face {
   font-family: "Vazir";
-  src: url("./font/Vazir.ttf") format("woff2");
+  src: url("../../assets/font/Vazir.ttf") format("woff2");
 }
 * {
   margin: 0;
