@@ -77,7 +77,7 @@ function main() {
     });
     // Close menu when any option clicked
     document.querySelectorAll(".menu-link").forEach(link => {
-        link.addEventListener("click", () => toggleClose);
+        link.addEventListener("click", toggleClose);
     });
     document.querySelector("main")
         .addEventListener("click", () => {
