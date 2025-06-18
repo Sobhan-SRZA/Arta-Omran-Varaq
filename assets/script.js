@@ -97,7 +97,7 @@ function main() {
             else
                 entry.target.classList.remove("animate");
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.01 });
     document.querySelectorAll("section").forEach(section => {
         section.classList.add("animate-hidden");
         observer.observe(section);
