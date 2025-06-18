@@ -10,8 +10,7 @@
     "start": "sass sass/main.scss assets/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Sobhan-SRZA",
   "license": "BSD-3-Clause",
   "devDependencies": {
     "sass": "^1.89.2"

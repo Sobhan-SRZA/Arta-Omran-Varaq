@@ -114,8 +114,7 @@ body.theme-dark .header__mobile-toggle span {
 }
 @media (max-width: 929px) {
   body.theme-dark .header__menu-wrapper {
-    background: rgba(48, 48, 49, 0.7);
-    backdrop-filter: saturate(180%) blur(12px);
+    background: #303031;
   }
 }
 body.theme-dark .contact__map {
@@ -166,8 +165,7 @@ body.theme-light .header__mobile-toggle span {
 }
 @media (max-width: 929px) {
   body.theme-light .header__menu-wrapper {
-    background: rgba(250, 246, 235, 0.7);
-    backdrop-filter: saturate(180%) blur(12px);
+    background: #faf6eb;
   }
 }
 body.theme-light .social-link {
