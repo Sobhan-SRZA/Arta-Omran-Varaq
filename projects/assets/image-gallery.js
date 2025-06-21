@@ -11,7 +11,6 @@ function openGallery(element) {
     document.getElementById('modal-image').src = galleryImages[currentImageIndex].src;
     document.getElementById('gallery-modal').style.display = 'block';
     document.body.style.overflow = 'hidden';
-    console.log(galleryImages.length);
     if (galleryImages.length < 2)
         document.querySelector(".gallery-controls").style.display = 'none';
 
@@ -37,7 +36,7 @@ function changeImage(direction) {
 }
 
 document.getElementById('gallery-modal').addEventListener('click', function (e) {
-    if (e.target === this)
+    if (e.target === document.querySelector(".modal-content"))
         closeGallery();
 });
 

@@ -232,6 +232,15 @@ section {
   filter: drop-shadow(0 0 5px #FBBF24);
 }
 
+.unselectable,
+img {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -ms-touch-select: none !important;
+}
+
 .header {
   top: 0;
   position: fixed;
@@ -460,7 +469,7 @@ section {
   transition: all 0.3s ease-in-out;
   word-break: keep-all;
   height: 100vh;
-  margin-bottom: 25rem;
+  margin-bottom: -4rem !important;
 }
 .about .section-title {
   margin-right: 1rem;
@@ -480,35 +489,57 @@ section {
 }
 .about__gallery {
   margin-top: 24rem;
-  left: 20%;
-  margin-right: 40%;
-  position: absolute;
-  width: calc((70% - 15rem) / 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.about__gallery img {
+.about__gallery-images {
+  position: relative;
+  width: min(90vw, 600px);
+  height: min(60vh, 400px);
+  perspective: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+.about__gallery-images img {
   position: absolute;
-  width: 200% !important;
-  max-width: 25rem !important;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 16/10;
+  object-fit: cover;
   border-radius: 12px;
-  transition: all 0.6s ease-in-out;
-  box-shadow: 0 0 30px #000000;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
 }
-.about__gallery img:hover {
-  transform: scale(1.2);
+.about__gallery-images img:hover.active {
+  transform: translateZ(120px) scale(1.4) !important;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  z-index: 20;
+  z-index: 120;
+  opacity: 1 !important;
 }
-.about__gallery img:nth-child(1) {
-  left: 0 !important;
-  top: -2rem !important;
+.about__gallery-images img.active {
+  transform: translateZ(120px) scale(1.1);
+  z-index: 3;
+  opacity: 1;
+  pointer-events: auto;
 }
-.about__gallery img:nth-child(2) {
-  right: 20% !important;
-  top: 2rem !important;
+.about__gallery-images img.left {
+  transform: translateX(-160px) rotateY(30deg) translateZ(0px);
+  z-index: 2;
+  opacity: 0.5;
+  pointer-events: auto;
 }
-.about__gallery img:nth-child(3) {
-  left: 20% !important;
-  top: 10rem !important;
+.about__gallery-images img.right {
+  transform: translateX(160px) rotateY(-30deg) translateZ(0px);
+  z-index: 2;
+  opacity: 0.5;
+  pointer-events: auto;
 }
 
 .services {
@@ -819,9 +850,8 @@ section {
 }
 
 @media (max-width: 1050px) {
-  .about__gallery {
-    left: 0;
-    margin-left: 40% !important;
+  .about {
+    margin-bottom: -30rem !important;
   }
   .about__gallery img {
     max-width: 20rem !important;
@@ -901,10 +931,7 @@ section {
     margin-right: 0;
     width: auto;
   }
-  .about__gallery {
-    left: auto;
-  }
-  .about__gallery img {
+  .about__gallery-images img {
     max-width: 20rem !important;
   }
 }
@@ -927,22 +954,14 @@ section {
   }
 }
 @media (max-width: 650px) {
-  .about {
-    margin-bottom: 8rem;
-  }
   .about__gallery {
     margin-top: 28rem !important;
+  }
+  .about__gallery-images {
     width: calc((100% - 0rem) / 10);
   }
-  .about__gallery img {
-    width: 15rem !important;
-  }
-  .about__gallery img:first-child {
-    top: 1rem !important;
-  }
-  .about__gallery img:last-child {
-    top: 5rem !important;
-    right: -5rem;
+  .about__gallery-images img {
+    width: 13rem !important;
   }
 }
 @media (max-width: 575px) {
@@ -952,13 +971,13 @@ section {
 }
 @media (max-width: 500px) {
   .about {
-    margin-bottom: 15rem;
+    margin-bottom: -20rem !important;
   }
   .about__gallery {
     margin-top: 35rem !important;
   }
-  .about__gallery img {
-    width: 12rem !important;
+  .about__gallery-images img {
+    width: calc((100% + 90rem) / 10) !important;
   }
 }
 @media (max-width: 480px) {
@@ -970,14 +989,11 @@ section {
   .about__gallery {
     margin-top: 39rem !important;
   }
-  .about__gallery img {
-    width: 9rem !important;
+  .about__gallery-images img {
+    width: 3rem !important;
   }
 }
 @media (max-width: 338px) {
-  .about {
-    margin-bottom: 25rem;
-  }
   .about__gallery {
     margin-top: 45rem !important;
   }
