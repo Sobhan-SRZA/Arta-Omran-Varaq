@@ -117,6 +117,14 @@ body.theme-dark .header__mobile-toggle span {
     background: #303031;
   }
 }
+body.theme-dark input,
+body.theme-dark textarea {
+  color: #E5E7EB;
+  background-color: #303031;
+}
+body.theme-dark .contact__form-submit {
+  background-color: #D4AF37 !important;
+}
 body.theme-dark .contact__map {
   filter: grayscale(20%) invert(100%) hue-rotate(180deg);
 }
@@ -167,6 +175,14 @@ body.theme-light .header__mobile-toggle span {
   body.theme-light .header__menu-wrapper {
     background: #faf6eb;
   }
+}
+body.theme-light input,
+body.theme-light textarea {
+  color: #374151;
+  background-color: #F9FAFB;
+}
+body.theme-light .contact__form-submit {
+  background-color: #756223 !important;
 }
 body.theme-light .social-link {
   color: #374151;

@@ -49,6 +49,16 @@
     transform: translateY(0);
   }
 }
+@keyframes zoom {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 @font-face {
   font-family: "BYekan";
   src: url("../../assets/font/BYekan.ttf") format("woff2");
@@ -111,6 +121,14 @@ body.theme-dark .header__mobile-toggle span {
     background: #303031;
   }
 }
+body.theme-dark input,
+body.theme-dark textarea {
+  color: #E5E7EB;
+  background-color: #303031;
+}
+body.theme-dark .contact__form-submit {
+  background-color: #D4AF37 !important;
+}
 body.theme-dark .contact__map {
   filter: grayscale(20%) invert(100%) hue-rotate(180deg);
 }
@@ -155,6 +173,14 @@ body.theme-light .header__mobile-toggle span {
   body.theme-light .header__menu-wrapper {
     background: #faf6eb;
   }
+}
+body.theme-light input,
+body.theme-light textarea {
+  color: #374151;
+  background-color: #F9FAFB;
+}
+body.theme-light .contact__form-submit {
+  background-color: #756223 !important;
 }
 body.theme-light .social-link {
   color: #374151;
@@ -534,12 +560,6 @@ section {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  /* &:hover img {
-    opacity: 0;
-  } */
-  /* &:hover video {
-    opacity: 1;
-  } */
 }
 .projects__grid .project-card:hover {
   transform: scale(1.03);
@@ -549,8 +569,9 @@ section {
   transition: all 0.3s ease-in-out;
   position: relative;
   padding-top: 56.25%;
+  overflow: hidden;
 }
-.projects__grid .project-card__media img, .projects__grid .project-card__media video {
+.projects__grid .project-card__media img {
   position: absolute;
   top: 0;
   left: 0;
@@ -558,9 +579,6 @@ section {
   height: 100%;
   object-fit: cover;
   transition: all 0.3s ease-in-out;
-}
-.projects__grid .project-card__media video {
-  opacity: 0;
 }
 .projects__grid .project-card__content {
   padding: 1.5rem;
@@ -572,6 +590,81 @@ section {
 }
 .projects__grid .project-card__desc {
   font-size: 1rem;
+}
+.projects__grid .project-card .gallery-main-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.projects__grid .project-card .gallery-main-image:hover {
+  transform: scale(1.05);
+  filter: brightness(0.8);
+}
+
+.gallery-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: auto;
+}
+.gallery-modal span {
+  width: fit-content !important;
+  height: min-content !important;
+  padding: 0 !important;
+}
+.gallery-modal span:hover {
+  color: #FBBF24 !important;
+  filter: drop-shadow(0 0 5px #FBBF24);
+}
+.gallery-modal .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+.gallery-modal .modal-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+}
+.gallery-modal .modal-content .modal-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  animation: zoom 0.3s;
+}
+.gallery-modal .modal-content .gallery-controls {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 20px;
+}
+.gallery-modal .modal-content .gallery-controls .prev-btn,
+.gallery-modal .modal-content .gallery-controls .next-btn {
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 15px;
+  user-select: none;
+  transition: all 0.3s ease-in-out;
 }
 
 .footer {
