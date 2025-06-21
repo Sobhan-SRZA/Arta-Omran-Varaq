@@ -11,6 +11,7 @@
     }
 }
 
+
 // Animations
 @keyframes slideInLeft {
     from {
@@ -74,6 +75,19 @@
     }
 }
 
+@keyframes zoom {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
 // Dark Theme
 @mixin dark-mode {
     body.theme-dark {
@@ -119,6 +133,16 @@
             }
         }
 
+        input,
+        textarea {
+            color: $text-light;
+            background-color: $fh-dark;
+        }
+
+        .contact__form-submit {
+            background-color: $primary-light !important;
+        }
+
         .contact__map {
             filter: grayscale(20%) invert(100%) hue-rotate(180deg);
         }
@@ -132,6 +156,7 @@
         }
     }
 }
+
 
 // Light Theme
 @mixin light-mode {
@@ -178,6 +203,16 @@
             }
         }
 
+        input,
+        textarea {
+            color: $text-dark;
+            background-color: $bg-light;
+        }
+
+        .contact__form-submit {
+            background-color: $primary !important;
+        }
+
         .social-link {
             color: $text-dark;
         }
@@ -187,6 +222,7 @@
         }
     }
 }
+
 
 // Change color and add blur effect to background
 @mixin change-color-add-blur($color) {

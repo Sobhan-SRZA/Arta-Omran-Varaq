@@ -22,22 +22,14 @@
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
       }
 
-      /* &:hover img {
-  opacity: 0;
-} */
-
-      /* &:hover video {
-  opacity: 1;
-} */
-
       &__media {
         transition: all 0.3s ease-in-out;
         position: relative;
         padding-top: 56.25%;
+        overflow: hidden;
       }
 
-      &__media img,
-      &__media video {
+      &__media img {
         position: absolute;
         top: 0;
         left: 0;
@@ -45,10 +37,6 @@
         height: 100%;
         object-fit: cover;
         transition: all 0.3s ease-in-out;
-      }
-
-      &__media video {
-        opacity: 0;
       }
 
       &__content {
@@ -63,6 +51,90 @@
 
       &__desc {
         font-size: 1rem;
+      }
+
+      .gallery-main-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+          filter: brightness(0.8);
+        }
+      }
+    }
+  }
+}
+
+.gallery-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: auto;
+
+  span {
+    width: fit-content !important;
+    height: min-content !important;
+    padding: 0 !important;
+
+    &:hover {
+      color: $hover !important;
+      filter: drop-shadow($hover-shadow);
+    }
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: $transition;
+    z-index: 2;
+  }
+
+  .modal-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+
+    .modal-image {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      animation: zoom 0.3s;
+    }
+
+    .gallery-controls {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0 20px;
+
+      .prev-btn,
+      .next-btn {
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        padding: 15px;
+        user-select: none;
+        transition: $transition;
       }
     }
   }

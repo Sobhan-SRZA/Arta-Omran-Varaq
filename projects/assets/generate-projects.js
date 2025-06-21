@@ -1,28 +1,32 @@
-const fs = require('fs');
 const path = require('path');
+const fs = require('fs');
 
 function generateProjectCard(projectName, images = []) {
   const firstImage = images.length > 0 ?
     `assets/images/${encodeURIComponent(projectName)}/${encodeURIComponent(images[0])}` :
     'https://placehold.co/600x400';
 
+  const images_div = [];
+  images.filter((_, i) => !i == 0).forEach((img) => {
+    images_div.push(
+      `<img src="assets/images/${encodeURIComponent(projectName)}/${encodeURIComponent(img)}" alt="${projectName}" loading="lazy" type="image/jpeg">`
+    )
+  })
+
   return `
     <article class="project-card theme-area transition">
       <div class="project-card__media transition">
-        <img src="${firstImage}" alt="${projectName}" loading="lazy" type="image/jpeg">
-        ${
-    // images.length > 1 ? `
-    // <video class="project-card__video" poster="${firstImage}" controls aria-label="ویدیو ${projectName}">
-    //   <source src="assets/videos/${encodeURIComponent(projectName)}/video.webm" type="video/webm">
-    //   <source src="assets/videos/${encodeURIComponent(projectName)}/video.mp4" type="video/mp4">
-    // </video>
-    // ` : ''
-    ""
+        <div class="image-gallery">
+            <img src="${firstImage}" alt="${projectName}" loading="lazy" type="image/jpeg" class="gallery-main-image" onclick="openGallery(this)">
+           ${images_div.length > 0 ?
+      `<div class="gallery-images" style="display:none;">
+                ${images_div.join("\n")}
+            </div>`: ""
     }
+        </div>
       </div>
       <div class="project-card__content transition">
         <h3 class="project-card__title primary transition">${projectName}</h3>
-        <p class="project-card__desc transition">توضیحات پروژه ${projectName} در این قسمت قرار می‌گیرد.</p>
       </div>
     </article>
   `;
