@@ -31,9 +31,13 @@ document.addEventListener("DOMContentLoaded", () => main());
 function main() {
 
     // Block to copy the images
-    document.querySelectorAll('img').forEach(img => {
-        img.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
     });
+
+    // document.querySelectorAll("img").forEach(img => {
+    //     img.addEventListener("contextmenu", e => e.preventDefault());
+    // });
 
     // Theme Toggle
     themeToggles.forEach((themeToggle) => {
