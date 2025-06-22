@@ -30,6 +30,11 @@ document.addEventListener("DOMContentLoaded", () => main());
 // Functions
 function main() {
 
+    // Block to copy the images
+    document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('contextmenu', e => e.preventDefault());
+    });
+
     // Theme Toggle
     themeToggles.forEach((themeToggle) => {
         themeToggle.addEventListener("click", () => {
@@ -149,4 +154,26 @@ function toggleClose() {
     menuWrapper.classList.remove("active");
     mobileToggle.setAttribute("aria-expanded", "false");
     document.body.style.overflow = "auto";
+}
+
+// Block F12, Ctrl+Shift+I, Ctrl+Shift+C, Ctrl+U | Block inspector panel
+const keys = new Map();
+function disableKeys(e) {
+    const key = e.key.toLowerCase();
+    const ctrlKey = keys.get("0");
+    const shiftKey = keys.get("1");
+    if (key === "control")
+        keys.set("0", key);
+
+    if (ctrlKey === "control" && key === "shift")
+        keys.set("1", key);
+
+    if (
+        key === "f12" ||
+        (ctrlKey === "control" && shiftKey === "shift" && key === "i") ||
+        (ctrlKey === "control" && shiftKey === "shift" && key === "c") ||
+        (ctrlKey === "control" && key === "u")
+    )
+        return false;
+
 }

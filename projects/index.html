@@ -46,7 +46,7 @@
     </script>
 </head>
 
-<body class="theme-light transition">
+<body class="theme-light transition" oncontextmenu="return false" onkeydown="return disableKeys(event)">
     <!-- Header -->
     <header class="header">
         <nav class="container header__nav" role="navigation" aria-label="ناوبری اصلی">
@@ -64,7 +64,7 @@
                 </svg>
             </button>
             <div class="header__logo">
-                <a href="#home" class="logo-text primary hover" aria-label="صفحه اصلی آرتا عمران ورق">آرتا
+                <a href="../#home" class="logo-text primary hover" aria-label="صفحه اصلی آرتا عمران ورق">آرتا
                     عمران
                     ورق</a>
             </div>
@@ -511,6 +511,7 @@
                     <span class="prev-btn" onclick="changeImage(-1)">&#10094;</span>
                     <span class="next-btn" onclick="changeImage(1)">&#10095;</span>
                 </div>
+                <div class="swipe-indicator" id="swipe-indicator"></div>
             </div>
         </div>
 
@@ -717,6 +718,6 @@
     </footer>
 </body>
 <script src="../assets/script.js"></script>
-<script src="assets/image-gallery.js"></script>
+<script src="../assets/image-gallery.js"></script>
 
 </html>

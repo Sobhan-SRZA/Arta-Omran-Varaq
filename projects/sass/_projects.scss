@@ -112,10 +112,12 @@
     padding: 20px;
 
     .modal-image {
-      max-width: 90%;
-      max-height: 90%;
+      max-width: 100%;
+      max-height: 100%;
       object-fit: contain;
       animation: zoom 0.3s;
+      transition: transform 0.3s ease-out;
+      touch-action: pan-y;
     }
 
     .gallery-controls {
@@ -135,6 +137,30 @@
         padding: 15px;
         user-select: none;
         transition: $transition;
+      }
+    }
+
+    .swipe-indicator {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+
+      @media (min-width: 768px) {
+        display: none;
+      }
+
+      span {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+
+        &.active {
+          background: white;
+        }
       }
     }
   }

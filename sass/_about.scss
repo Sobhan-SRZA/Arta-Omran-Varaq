@@ -4,84 +4,135 @@
   margin: 4rem 0;
   transition: $transition;
   word-break: keep-all;
-  height: 100vh;
-  margin-bottom: -4rem !important;
+  min-height: 100vh;
+  margin-bottom: 5rem !important;
+
+  @media (min-width: 768px) {
+    margin-bottom: 5rem !important;
+  }
 
   .section-title {
     margin-right: 1rem;
     width: max-content;
     margin-bottom: 1rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+
+    @media (max-width: 768px) {
+      margin-right: 0;
+      width: auto;
+    }
   }
 
   &__text {
     word-break: keep-all;
-    margin-right: 10%;
-    position: absolute;
-    max-width: 900px;
-    margin: 0 auto;
-    font-size: 1.3rem;
+    position: relative;
+    max-width: 90%;
+    margin: 2rem auto;
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
     direction: rtl;
     padding: 1rem;
     transition: $transition;
+
+    @media (min-width: 768px) {
+      position: absolute;
+      margin-right: 5%;
+      max-width: 900px;
+    }
   }
 
   &__gallery {
-    margin-top: 24rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 2rem;
+    margin-top: 25rem !important;
+
+    @media (min-width: 768px) {
+      margin-top: 12rem;
+    }
+
+    @media (min-width: 992px) {
+      margin-top: 24rem;
+    }
 
     &-images {
       position: relative;
       width: min(90vw, 600px);
-      height: min(60vh, 400px);
+      height: min(50vh, 400px);
       perspective: 1200px;
       display: flex;
       justify-content: center;
       align-items: center;
       transform-style: preserve-3d;
 
+      @media (max-width: 767px) {
+        perspective: none;
+        height: auto;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
       img {
-        position: absolute;
+        position: relative;
         width: 100%;
         max-width: 420px;
         aspect-ratio: 16 / 10;
         object-fit: cover;
         border-radius: 12px;
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+        box-shadow: $shadow !important;
         cursor: pointer;
         transition: transform 0.6s ease, opacity 0.6s ease;
-        opacity: 0;
-        pointer-events: none;
+        opacity: 1;
+        pointer-events: auto;
         transition: $transition;
+
+        @media (min-width: 768px) {
+          position: absolute;
+          opacity: 0;
+          pointer-events: none;
+          box-shadow: $shadow !important;
+        }
 
         &:hover.active {
           transform: translateZ(120px) scale(1.4) !important;
-          box-shadow: $shadow-hover;
+          box-shadow: $shadow-hover !important;
           z-index: 120;
           opacity: 1 !important;
+
+          @media (max-width: 768px) {
+            transform: scale(1.1) !important;
+          }
         }
       }
 
       img.active {
-        transform: translateZ(120px) scale(1.1);
-        z-index: 3;
-        opacity: 1;
-        pointer-events: auto;
+        @media (min-width: 768px) {
+          transform: translateZ(120px) scale(1.1);
+          z-index: 3;
+          opacity: 1;
+          pointer-events: auto;
+        }
       }
 
-      img.left {
-        transform: translateX(-160px) rotateY(30deg) translateZ(0px);
-        z-index: 2;
-        opacity: 0.5;
-        pointer-events: auto;
+      img.left,
+      img.right {
+        @media (min-width: 768px) {
+          transform: translateX(-160px) rotateY(30deg) translateZ(0px);
+          z-index: 2;
+          opacity: 0.5;
+          pointer-events: auto;
+        }
+
+        @media (max-width: 767px) {
+          transform: none !important;
+        }
       }
 
       img.right {
-        transform: translateX(160px) rotateY(-30deg) translateZ(0px);
-        z-index: 2;
-        opacity: 0.5;
-        pointer-events: auto;
+        @media (min-width: 768px) {
+          transform: translateX(160px) rotateY(-30deg) translateZ(0px);
+        }
       }
     }
   }
