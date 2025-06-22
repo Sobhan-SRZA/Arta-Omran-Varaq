@@ -230,11 +230,22 @@ section {
   filter: drop-shadow(0 0 5px #FBBF24);
 }
 
+img {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -ms-touch-select: none !important;
+  user-select: none !important;
+  -webkit-user-drag: none !important;
+  user-drag: none !important;
+}
+
 .header {
   top: 0;
   position: fixed;
   width: 100%;
-  box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease-in-out;
   z-index: 1;
   height: 4.5rem;
@@ -408,7 +419,7 @@ section {
   background: rgba(249, 250, 251, 0.95);
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.5);
 }
 .contact__info-title {
   transition: all 0.3s ease-in-out;
@@ -472,14 +483,14 @@ section {
 }
 .contact__info:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
 }
 .contact__form {
   transition: all 0.3s ease-in-out;
   background: rgba(249, 250, 251, 0.95);
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.5);
 }
 .contact__form-title {
   transition: all 0.3s ease-in-out;
@@ -529,19 +540,19 @@ section {
 }
 .contact__form:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
 }
 .contact__map {
   transition: all 0.3s ease-in-out;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 0 14px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.5) !important;
   height: 400px;
   width: 100%;
 }
 .contact__map:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8) !important;
 }
 
 .projects {
@@ -697,7 +708,7 @@ section {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.5);
 }
 .footer p {
   margin-bottom: 1rem;

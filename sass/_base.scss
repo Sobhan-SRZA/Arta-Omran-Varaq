@@ -69,3 +69,15 @@ section {
   text-shadow: $hover-shadow;
   filter: drop-shadow($hover-shadow);
 }
+
+// Block copying images
+img {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -ms-touch-select: none !important;
+  user-select: none !important;
+  -webkit-user-drag: none !important;
+  user-drag: none !important;
+} 

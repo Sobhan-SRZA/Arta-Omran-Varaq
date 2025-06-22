@@ -8,6 +8,7 @@
     "watch": "sass sass/main.scss assets/style.css --watch",
     "start:projects": "sass projects/sass/main.scss projects/assets/style.css",
     "start": "sass sass/main.scss assets/style.css",
+    "watch-all": "sass sass/main.scss assets/style.css --watch && sass projects/sass/main.scss projects/assets/style.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sobhan-SRZA",
