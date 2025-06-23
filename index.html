@@ -132,20 +132,20 @@
                     واسطه مواد اولیه مورد نیاز خود را تأمین می نماید.</p>
                 <div class="about__gallery">
                     <div class="about__gallery-images image-gallery" id="circleGallery">
-                        <img src="assets/images/1.jpg" alt="آرتا عمران ورق" loading="lazy" type="image/jpeg"
-                            onclick="openGallery(this)">
-                        <img src="assets/images/2.jpg" alt="آرتا عمران ورق" loading="lazy" type="image/jpeg"
-                            onclick="openGallery(this)">
-                        <img src="assets/images/3.jpg" alt="آرتا عمران ورق" loading="lazy" type="image/jpeg"
-                            onclick="openGallery(this)">
-                        <img src="assets/images/4.jpg" alt="آرتا عمران ورق" loading="lazy" type="image/jpeg"
-                            onclick="openGallery(this)">
-                        <img src="assets/images/5.jpg" alt="آرتا عمران ورق" loading="lazy" type="image/jpeg"
-                            onclick="openGallery(this)">
-                        <img src="assets/images/6.jpg" alt="آرتا عمران ورق" loading="lazy" type="image/jpeg"
-                            onclick="openGallery(this)">
-                        <img src="assets/images/7.jpg" alt="آرتا عمران ورق" loading="lazy" type="image/jpeg"
-                            onclick="openGallery(this)">
+                        <img class="gallery-item" src="assets/images/1.jpg" alt="آرتا عمران ورق" loading="lazy"
+                            type="image/jpeg">
+                        <img class="gallery-item" src="assets/images/2.jpg" alt="آرتا عمران ورق" loading="lazy"
+                            type="image/jpeg">
+                        <img class="gallery-item" src="assets/images/3.jpg" alt="آرتا عمران ورق" loading="lazy"
+                            type="image/jpeg">
+                        <img class="gallery-item" src="assets/images/4.jpg" alt="آرتا عمران ورق" loading="lazy"
+                            type="image/jpeg">
+                        <img class="gallery-item" src="assets/images/5.jpg" alt="آرتا عمران ورق" loading="lazy"
+                            type="image/jpeg">
+                        <img class="gallery-item" src="assets/images/6.jpg" alt="آرتا عمران ورق" loading="lazy"
+                            type="image/jpeg">
+                        <img class="gallery-item" src="assets/images/7.jpg" alt="آرتا عمران ورق" loading="lazy"
+                            type="image/jpeg">
                     </div>
                 </div>
             </div>
@@ -292,12 +292,12 @@
                 <h2 class="section-title primary">گواهینامه‌ها و افتخارات</h2>
                 <div class="certificates__grid">
                     <article class="certificate-card theme-area">
-                        <img src="https://placehold.co/200x200" alt="گواهینامه ISO 9001" loading="lazy">
+                        <img class="gallery-item" src="https://placehold.co/200x200" alt="گواهینامه ISO 9001" loading="lazy">
                         <h3 class="certificate-card__title primary">ISO 9001</h3>
                         <p class="certificate-card__desc">گواهینامه مدیریت کیفیت.</p>
                     </article>
                     <article class="certificate-card theme-area">
-                        <img src="https://placehold.co/200x200" alt="گواهینامه استاندارد" loading="lazy">
+                        <img class="gallery-item" src="https://placehold.co/200x200" alt="گواهینامه استاندارد" loading="lazy">
                         <h3 class="certificate-card__title primary">استاندارد CE</h3>
                         <p class="certificate-card__desc">تأییدیه استاندارد اروپا.</p>
                     </article>
@@ -434,7 +434,9 @@
                     </div>
                     <div class="contact__form theme-area">
                         <h3 class="contact__form-title primary">ارسال پیام</h3>
-                        <form action="submit-form.php" method="POST">
+                        <form
+                            action="https://script.google.com/macros/s/AKfycbwsfgf6NYB7Mw18dqzrLpWZrz_8CvjxWkSwEXFDv7Ga4WUzlsihnPptjxUTqIbpm5xevA/exec"
+                            method="POST">
                             <input type="text" name="name" placeholder="نام و نام خانوادگی" required
                                 aria-label="نام و نام خانوادگی">
                             <input type="email" name="email" placeholder="ایمیل" required aria-label="ایمیل">
@@ -506,9 +508,22 @@
             </div>
         </div>
     </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox">
+        <div class="close">&times;</div>
+        <div class="lightbox-nav prev">&#10095;</div>
+        <div class="lightbox-nav next">&#10094;</div>
+        <div class="lightbox-content">
+            <img class="lightbox-img" src="" alt="" loading="lazy">
+            <div class="image-counter">1/1</div>
+        </div>
+    </div>
 </body>
-<script src="assets/script.js"></script>
-<script src="assets/circle-gallery.js"></script>
-<script src="assets/image-gallery.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/circle-gallery.js"></script>
+<script src="assets/js/global-gallery.js"></script>
+<script src="assets/js/auto-slide.js"></script>
+<script src="assets/js/send-message.js"></script>
 
 </html>
