@@ -4,15 +4,16 @@ let index = 0;
 
 function render() {
     images.forEach((img, i) => {
-        img.className = "";
+        img.classList.remove("active", "right", "left");
         const diff = (i - index + images.length) % images.length;
-        if (diff === 0) {
+        if (diff === 0)
             img.classList.add("active");
-        } else if (diff === 1 || (diff === -images.length + 1)) {
+
+        else if (diff === 1 || (diff === -images.length + 1))
             img.classList.add("right");
-        } else if (diff === images.length - 1 || diff === -1) {
+
+        else if (diff === images.length - 1 || diff === -1)
             img.classList.add("left");
-        }
     });
 }
 

@@ -20,7 +20,7 @@
     <link rel="canonical" href="https://aov.ir/projects">
     <title>آرتا عمران ورق | پروژه ها</title>
     <link rel="icon" type="image/png" href="../assets/favicon.png">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="../assets/style.css">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -503,17 +503,6 @@
                 </div>
             </div>
         </section>
-        <div id="gallery-modal" class="gallery-modal">
-            <span class="close-btn" onclick="closeGallery()">&times;</span>
-            <div class="modal-content">
-                <img id="modal-image" class="modal-image">
-                <div class="gallery-controls">
-                    <span class="prev-btn" onclick="changeImage(-1)">&#10094;</span>
-                    <span class="next-btn" onclick="changeImage(1)">&#10095;</span>
-                </div>
-                <div class="swipe-indicator" id="swipe-indicator"></div>
-            </div>
-        </div>
 
         <!-- Contact -->
         <section id="contact" class="contact">
@@ -644,7 +633,9 @@
                     </div>
                     <div class="contact__form theme-area">
                         <h3 class="contact__form-title primary">ارسال پیام</h3>
-                        <form action="submit-form.php" method="POST">
+                        <form
+                            action="https://script.google.com/macros/s/AKfycbwsfgf6NYB7Mw18dqzrLpWZrz_8CvjxWkSwEXFDv7Ga4WUzlsihnPptjxUTqIbpm5xevA/exec"
+                            method="POST">
                             <input type="text" name="name" placeholder="نام و نام خانوادگی" required
                                 aria-label="نام و نام خانوادگی">
                             <input type="email" name="email" placeholder="ایمیل" required aria-label="ایمیل">
@@ -716,8 +707,20 @@
             </div>
         </div>
     </footer>
+
+    <!-- Gallery modal -->
+    <div id="gallery-modal" class="gallery-modal">
+        <div class="close">&times;</div>
+        <div class="gallery-modal__controls prev">&#10095;</div>
+        <div class="gallery-modal__controls next">&#10094;</div>
+        <div class="gallery-modal__content">
+            <img class="gallery-modal__content-img" src="" alt="" loading="lazy">
+            <div class="gallery-modal__content-image-counter">1/1</div>
+        </div>
+    </div>
 </body>
-<script src="../assets/script.js"></script>
-<script src="../assets/image-gallery.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/image-gallery.js"></script>
+<script src="../assets/js/send-message.js"></script>
 
 </html>

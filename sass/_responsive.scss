@@ -20,10 +20,15 @@
 
 // Header (Mobile Toggle)
 @media (max-width: 929px) {
+    .header {
+        position: fixed;
+        z-index: 1000 !important;
+    }
+
     .header__mobile-toggle {
         visibility: visible;
         display: flex;
-        z-index: 1000;
+        z-index: 1000 !important;
     }
 
     .header__mobile-theme-toggle {
@@ -37,22 +42,20 @@
         gap: 2rem;
 
         &-wrapper {
-            position: absolute;
-            opacity: 0;
+            position: fixed;
             transform: translateX(100%);
             height: 100vh;
             width: 100%;
-            top: 0;
+            top: 4.5rem;
             right: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 999;
+            z-index: -1000 !important;
 
             &.active {
-                opacity: 1;
                 position: fixed;
-                top: 0;
+                top: 4.5rem;
                 right: 0;
                 width: 50%;
                 height: 100vh;
@@ -61,6 +64,7 @@
                 align-items: center;
                 justify-content: center;
                 transform: translateX(100%);
+                z-index: -1000 !important;
 
                 &.active {
                     transform: translateX(0);
