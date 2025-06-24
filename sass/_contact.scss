@@ -180,7 +180,8 @@
     height: 400px;
     width: 100%;
 
-    &:hover {
+    &:hover,
+    &:active {
       transform: translateY(-5px);
       box-shadow: $shadow-hover !important;
     }

@@ -151,8 +151,8 @@
             background-color: $primary-light !important;
         }
 
-        .contact__map {
-            filter: grayscale(20%) invert(100%) hue-rotate(180deg);
+        .contact__map iframe {
+            filter: grayscale(20%) invert(100%) hue-rotate(180deg) !important;
         }
 
         .social-link {
