@@ -347,7 +347,7 @@ body.theme-dark .header {
 body.theme-dark .header__mobile-toggle span {
   background: #E5E7EB;
 }
-@media (max-width: 929px) {
+@media (max-width: 1052px) {
   body.theme-dark .header__menu-wrapper {
     background: #303031 !important;
   }
@@ -406,7 +406,7 @@ body.theme-light .header {
 body.theme-light .header__mobile-toggle span {
   background: #374151;
 }
-@media (max-width: 929px) {
+@media (max-width: 1052px) {
   body.theme-light .header__menu-wrapper {
     background: #faf6eb !important;
   }
@@ -1270,7 +1270,7 @@ img {
     font-size: 0.9rem;
   }
 }
-@media (max-width: 969px) {
+@media (max-width: 1052px) {
   .header {
     position: fixed;
     z-index: 1000 !important;

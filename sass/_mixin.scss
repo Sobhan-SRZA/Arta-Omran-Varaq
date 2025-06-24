@@ -135,7 +135,7 @@
             background: $text-light;
         }
 
-        @media (max-width:929px) {
+        @media (max-width: 1052px) {
             .header__menu-wrapper {
                 @include change-color($fh-dark);
             }
@@ -213,7 +213,7 @@
             background: $text-dark;
         }
 
-        @media (max-width:929px) {
+        @media (max-width: 1052px) {
             .header__menu-wrapper {
                 @include change-color($fh-light);
             }
