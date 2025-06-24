@@ -729,14 +729,16 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 4rem !important;
 }
 @media (max-width: 768px) {
   .gallery {
     margin-bottom: 1rem !important;
-    margin-top: 6rem !important;
+    margin-top: 8rem !important;
   }
 }
 .gallery__images {
+  margin-top: 4rem !important;
   position: relative;
   width: min(90vw, 600px);
   height: min(50vh, 400px);
@@ -1268,7 +1270,7 @@ img {
     font-size: 0.9rem;
   }
 }
-@media (max-width: 929px) {
+@media (max-width: 969px) {
   .header {
     position: fixed;
     z-index: 1000 !important;
