@@ -11,8 +11,17 @@
 }
 
 html[lang=en] {
+  .hero__text {
+    text-align: left;
+    direction: ltr;
+  }
+
   .theme-toggle svg {
     transform: translate(-50%, -50%);
+  }
+
+  .per-number {
+    font-family: sans-serif;
   }
 }
 
@@ -68,6 +77,10 @@ section {
   color: $hover !important;
   text-shadow: $hover-shadow;
   filter: drop-shadow($hover-shadow);
+}
+
+.theme-area {
+  position: relative;
 }
 
 // Block copying images
