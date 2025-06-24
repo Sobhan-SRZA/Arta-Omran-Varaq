@@ -47,16 +47,19 @@
     font-size: 5rem;
     color: $hover;
     margin-bottom: 1.5rem;
+    margin-top: -5rem;
     text-shadow: 0 4px 8px $hover;
-    animation: slideInLeft $animation-duration ease-out;
+    // animation: slideInLeft $animation-duration ease-out;
+    animation: fadeInUpMuch 5s ease-in-out;
   }
 
   &__subtitle {
     font-size: 1.8rem;
     color: $bg-light;
     margin-bottom: 2.5rem;
-    animation: slideInRight $animation-duration ease-out 0.2s;
+    // animation: slideInRight $animation-duration ease-out 0.2s;
     animation-fill-mode: backwards;
+    animation: fadeInUpMuch 5s ease-in-out;
   }
 
   &__cta {
@@ -77,5 +80,20 @@
       box-shadow: $shadow, 0 0 15px $secondary;
       transform: translateY(-5px);
     }
+  }
+
+  &__text {
+    margin-top: 10rem !important;
+    word-break: keep-all;
+    position: relative;
+    max-width: 90%;
+    margin: 2rem auto;
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
+    direction: rtl;
+    text-align: right;
+    padding: 1rem;
+    transition: $transition;
+    color: $bg-light !important;
+    animation: fadeInUpMuch 10s ease-in-out;
   }
 }

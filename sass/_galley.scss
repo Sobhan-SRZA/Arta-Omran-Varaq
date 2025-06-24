@@ -1,0 +1,95 @@
+@import "variable";
+
+.gallery {
+  transition: $transition;
+  word-break: keep-all;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    margin-bottom: 1rem !important;
+    margin-top: 6rem !important;
+  }
+
+  &__images {
+    position: relative;
+    width: min(90vw, 600px);
+    height: min(50vh, 400px);
+    perspective: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+
+    @media (max-width: 767px) {
+      perspective: none;
+      height: auto;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    img {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: $shadow !important;
+      cursor: pointer;
+      transition: transform 0.6s ease, opacity 0.6s ease;
+      opacity: 1;
+      pointer-events: auto;
+      transition: $transition;
+
+      @media (min-width: 768px) {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+        box-shadow: $shadow !important;
+      }
+
+      &:hover.active {
+        transform: translateZ(120px) scale(1.4) !important;
+        box-shadow: $shadow-hover !important;
+        z-index: 120;
+        opacity: 1 !important;
+
+        @media (max-width: 768px) {
+          transform: scale(1.1) !important;
+        }
+      }
+    }
+
+    img.active {
+      @media (min-width: 768px) {
+        transform: translateZ(120px) scale(1.1);
+        z-index: 3;
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+
+    img.left,
+    img.right {
+      @media (min-width: 768px) {
+        transform: translateX(-160px) rotateY(30deg) translateZ(0px);
+        z-index: 2;
+        opacity: 0.5;
+        pointer-events: auto;
+      }
+
+      @media (max-width: 767px) {
+        transform: none !important;
+      }
+    }
+
+    img.right {
+      @media (min-width: 768px) {
+        transform: translateX(160px) rotateY(-30deg) translateZ(0px);
+      }
+    }
+  }
+}

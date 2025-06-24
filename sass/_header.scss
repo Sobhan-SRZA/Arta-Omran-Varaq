@@ -142,6 +142,7 @@
       &:hover {
         color: $hover;
         text-shadow: $hover-shadow;
+        transform: translateY(-5px);
       }
     }
   }
