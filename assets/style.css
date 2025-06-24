@@ -360,8 +360,8 @@ body.theme-dark textarea {
 body.theme-dark .contact__form-submit {
   background-color: #D4AF37 !important;
 }
-body.theme-dark .contact__map {
-  filter: grayscale(20%) invert(100%) hue-rotate(180deg);
+body.theme-dark .contact__map iframe {
+  filter: grayscale(20%) invert(100%) hue-rotate(180deg) !important;
 }
 body.theme-dark .social-link {
   color: #E5E7EB;
@@ -640,7 +640,7 @@ img {
 .hero {
   margin-top: 4.5rem;
   --bg-image: url("./images/1.jpg");
-  background: linear-gradient(to right, rgba(249, 115, 22, 0.8) -30%, rgba(30, 58, 138, 0.8) 50%, rgba(249, 115, 22, 0.8) 130%), var(--bg-image);
+  background: linear-gradient(to right, rgba(249, 177, 22, 0.5) -30%, rgba(0, 0, 0, 0.7) 50%, rgba(249, 177, 22, 0.5) 130%), var(--bg-image);
   background-repeat: no-repeat;
   background-clip: border-box;
   background-position-x: center;
@@ -1216,7 +1216,7 @@ img {
   height: 400px;
   width: 100%;
 }
-.contact__map:hover {
+.contact__map:hover, .contact__map:active {
   transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8) !important;
 }

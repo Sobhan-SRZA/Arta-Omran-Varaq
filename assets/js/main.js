@@ -87,7 +87,10 @@ const region = {
         "contact__form-email-placeholder": "Email",
         "contact__form-message-placeholder": "Your Message",
         "contact__form-submit": "Send Message",
+        "contact__form-submit-sending": "Sending...",
         "footer__text": "© 2011-2025 Arta Omran Varagh. All rights reserved.",
+        "web_title": "Arta Omran Varagh",
+        "web_title-projects": "Arta Omran Varagh | Our Projects",
         "title": {
             "header__nav": "Main navigation",
             "theme-toggle": "Toggle theme",
@@ -196,7 +199,10 @@ const region = {
         "contact__form-email-placeholder": "ایمیل",
         "contact__form-message-placeholder": "پیام شما",
         "contact__form-submit": "ارسال پیام",
+        "contact__form-submit-sending": "در حال ارسال...",
         "footer__text": "© 1404-1390 آرتا عمران ورق. تمامی حقوق محفوظ است.",
+        "web_title": "آرتا عمران ورق",
+        "web_title-projects": "آرتا عمران ورق | پروژه های ما",
         "title": {
             "header__nav": "ناوبری اصلی",
             "theme-toggle": "تغییر تم",
@@ -230,15 +236,54 @@ const region = {
 // Load contents
 document.addEventListener("DOMContentLoaded", () => main());
 
+
+// Block DevTools
+document.addEventListener("keydown", function (e) {
+    if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") ||
+        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "c") ||
+        (e.ctrlKey && e.key.toLowerCase() === "u") ||
+        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "j")
+    ) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+    }
+}, true);
+
+// Block right click (to copy the images)
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+}, false);
+
+(function () {
+    let isOpen = false;
+
+    const element = new Image();
+    Object.defineProperty(element, 'id', {
+        get: function () {
+            isOpen = true;
+            throw new Error("DevTools is open");
+        }
+    });
+
+    setInterval(() => {
+        const before = new Date().getTime();
+        debugger;
+        const after = new Date().getTime();
+        if (after - before > 200) {
+            location.href = "/404.html"
+        }
+    }, 1000);
+})();
+
+
 // Functions
 function main() {
     // Load site with persian language
     changeLanguage();
 
-    // Block to copy the images
-    document.addEventListener("contextmenu", function (e) {
-        e.preventDefault();
-    });
 
     // Initialize theme on page load
     initTheme();
@@ -308,6 +353,7 @@ function main() {
     });
 }
 
+
 // Save text in user clipboard
 async function copyText(text) {
     const isEnglish = document.documentElement.lang === "en";
@@ -320,6 +366,7 @@ async function copyText(text) {
     }
 }
 
+
 // For redirect url path
 (function () {
     var redirect = sessionStorage.redirect;
@@ -327,6 +374,7 @@ async function copyText(text) {
     if (redirect && redirect != location.href)
         history.replaceState(null, null, redirect);
 })();
+
 
 // Mobile Toggle close
 function toggleClose() {
@@ -336,28 +384,6 @@ function toggleClose() {
     document.body.style.overflow = "auto";
 }
 
-// Block F12, Ctrl+Shift+I, Ctrl+Shift+C, Ctrl+U | Block inspector panel
-const keys = new Map();
-function disableKeys(e) {
-    if (!e.key)
-        return;
-
-    const key = e.key.toLowerCase();
-    const ctrlKey = keys.get("0");
-    const shiftKey = keys.get("1");
-    keys.set("0", key);
-
-    if (ctrlKey)
-        keys.set("1", key);
-
-    if (
-        key === "f12" ||
-        (ctrlKey === "control" && shiftKey === "shift" && key === "i") ||
-        (ctrlKey === "control" && shiftKey === "shift" && key === "c") ||
-        (ctrlKey === "control" && key === "u")
-    )
-        return false;
-}
 
 // Change language
 function changeLanguage(isEnglish = false) {
@@ -365,6 +391,7 @@ function changeLanguage(isEnglish = false) {
     document.documentElement.lang = lang;
     document.documentElement.dir = isEnglish ? "ltr" : "rtl";
     const selected_region = region[lang];
+    (document.querySelector(".gallery-modal") || document.querySelector(".lightbox")).dir = "rtl";
 
     for (const key in selected_region) {
         if (key === "title") continue; // Skip title as it will be handled by setTitles
@@ -399,6 +426,10 @@ function changeLanguage(isEnglish = false) {
     document.querySelector(".contact__form textarea[name=\"message\"]").title = selected_region["contact__form-message-placeholder"];
     document.querySelector(".contact__form-submit").textContent = selected_region["contact__form-submit"];
     document.querySelector(".contact__form-submit").title = selected_region["contact__form-submit"];
+
+    document.title = selected_region["web_title"];
+    if (document.URL.includes("project"))
+        document.title = selected_region["web_title-projects"];
 
     // Contacts labels change lang
     const contactLabels = selected_region["contact__info-labels"];
