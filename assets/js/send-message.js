@@ -11,13 +11,7 @@ document.querySelector("form")
 
         submitButton.disabled = true;
         submitButton.textContent = selected_region["contact__form-submit-sending"];
-        // setTimeout(() => {
-        //     submitButton.disabled = false;
-        //     submitButton.textContent = selected_region["contact__form-submit"];
-        // }, 3000);
         try {
-            alert(([...formData]))
-            alert(form.action)
             const response = await fetch(form.action, {
                 method: "POST",
                 body: new URLSearchParams([...formData]),
@@ -29,20 +23,17 @@ document.querySelector("form")
             const result = await response.json();
 
             if (result.success) {
-                alert(result.message || "پیام شما با موفقیت ارسال شد!");
+                alert(selected_region["sendingMessage"]);
                 form.reset();
             }
 
-            else {
-                alert("❌ " + (result.error || "خطایی رخ داده است"));
-                alert("❌ " + (result.details || "خطایی رخ داده است"));
-            }
+            else
+                alert("❌ " + (selected_region["sendingMessageError"] + result.details));
         }
 
         catch (error) {
             console.error(error);
-            alert(error);
-            alert("⚠️ خطای شبکه: لطفاً اتصال اینترنت خود را بررسی کنید.");
+            alert("⚠️ " + (selected_region["sendingMessageError"] + error));
         }
 
         finally {
