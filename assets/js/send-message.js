@@ -27,8 +27,22 @@ document.querySelector("form")
                 form.reset();
             }
 
-            else
-                alert("❌ " + (selected_region["sendingMessageError"] + result.details));
+            else {
+                if (result.error.includes("30"))
+                    alert("❌ " + selected_region["sendingMessageTimeout"]);
+
+                else if (result.error.includes("پیام"))
+                    alert("❌ " + selected_region["sendingMessage-messageError"]);
+
+                else if (result.error.includes("نام"))
+                    alert("❌ " + selected_region["sendingMessage-nameError"]);
+
+                else if (result.error.includes("معتبر"))
+                    alert("❌ " + selected_region["sendingMessage-emailError"]);
+
+                else
+                    alert("❌ " + (selected_region["sendingMessageError"] + result.details));
+            }
         }
 
         catch (error) {
@@ -53,11 +67,11 @@ function doPost(e) {
     const email = params.email ? params.email[0] : "نامشخص";
     const message = params.message ? params.message[0] : "بدون پیام";
 
-    if (!name || name.length < 2)
+    if (!name || name.length < 3)
         return ContentService
             .createTextOutput(JSON.stringify({
                 success: false,
-                error: "نام باید حداقل 2 حرف باشد"
+                error: "نام باید حداقل 3 حرف باشد"
             }))
             .setMimeType(ContentService.MimeType.JSON);
 
