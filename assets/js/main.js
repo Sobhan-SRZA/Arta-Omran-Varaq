@@ -5,6 +5,7 @@ const menuWrapper = document.querySelector(".header__menu-wrapper");
 const themeToggles = document.querySelectorAll("#theme-toggle");
 const copyAction = document.querySelectorAll(".copyAction");
 
+const blockDevTools = true;
 const region = {
     en: {
         "logo-text": "Arta Omran Varagh",
@@ -250,45 +251,49 @@ document.addEventListener("DOMContentLoaded", () => main());
 
 
 // Block DevTools
-document.addEventListener("keydown", function (e) {
-    if (
-        e.key === "F12" ||
-        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") ||
-        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "c") ||
-        (e.ctrlKey && e.key.toLowerCase() === "u") ||
-        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "j")
-    ) {
-        e.preventDefault();
-        e.stopPropagation();
-        return false;
-    }
-}, true);
+if (blockDevTools)
+    document.addEventListener("keydown", function (e) {
+        if (
+            e.key === "F12" ||
+            (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") ||
+            (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "c") ||
+            (e.ctrlKey && e.key.toLowerCase() === "u") ||
+            (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "j")
+        ) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+    }, true);
 
 // Block right click (to copy the images)
-document.addEventListener("contextmenu", function (e) {
-    e.preventDefault();
-}, false);
+if (blockDevTools)
+    document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+    }, false);
 
-(function () {
-    let isOpen = false;
+// Lock website when dev tools is open.
+if (blockDevTools)
+    (function () {
+        let isOpen = false;
 
-    const element = new Image();
-    Object.defineProperty(element, 'id', {
-        get: function () {
-            isOpen = true;
-            throw new Error("DevTools is open");
-        }
-    });
+        const element = new Image();
+        Object.defineProperty(element, 'id', {
+            get: function () {
+                isOpen = true;
+                throw new Error("DevTools is open");
+            }
+        });
 
-    setInterval(() => {
-        const before = new Date().getTime();
-        debugger;
-        const after = new Date().getTime();
-        if (after - before > 200) {
-            location.href = "/404.html"
-        }
-    }, 1000);
-})();
+        setInterval(() => {
+            const before = new Date().getTime();
+            debugger;
+            const after = new Date().getTime();
+            if (after - before > 200) {
+                location.href = "/404.html"
+            }
+        }, 1000);
+    })();
 
 
 // Functions
@@ -430,14 +435,16 @@ function changeLanguage(isEnglish = false) {
     }
 
     // Change lang manually for some elements
-    document.querySelector(".contact__form input[name=\"name\"]").placeholder = selected_region["contact__form-name-placeholder"];
-    document.querySelector(".contact__form input[name=\"email\"]").placeholder = selected_region["contact__form-email-placeholder"];
-    document.querySelector(".contact__form textarea[name=\"message\"]").placeholder = selected_region["contact__form-message-placeholder"];
-    document.querySelector(".contact__form input[name=\"name\"]").title = selected_region["contact__form-name-placeholder"];
-    document.querySelector(".contact__form input[name=\"email\"]").title = selected_region["contact__form-email-placeholder"];
-    document.querySelector(".contact__form textarea[name=\"message\"]").title = selected_region["contact__form-message-placeholder"];
-    document.querySelector(".contact__form-submit").textContent = selected_region["contact__form-submit"];
-    document.querySelector(".contact__form-submit").title = selected_region["contact__form-submit"];
+    if (document.querySelector(".contact__form")) {
+        document.querySelector(".contact__form input[name=\"name\"]").placeholder = selected_region["contact__form-name-placeholder"];
+        document.querySelector(".contact__form input[name=\"email\"]").placeholder = selected_region["contact__form-email-placeholder"];
+        document.querySelector(".contact__form textarea[name=\"message\"]").placeholder = selected_region["contact__form-message-placeholder"];
+        document.querySelector(".contact__form input[name=\"name\"]").title = selected_region["contact__form-name-placeholder"];
+        document.querySelector(".contact__form input[name=\"email\"]").title = selected_region["contact__form-email-placeholder"];
+        document.querySelector(".contact__form textarea[name=\"message\"]").title = selected_region["contact__form-message-placeholder"];
+        document.querySelector(".contact__form-submit").textContent = selected_region["contact__form-submit"];
+        document.querySelector(".contact__form-submit").title = selected_region["contact__form-submit"];
+    }
 
     document.title = selected_region["web_title"];
     if (document.URL.includes("project"))
